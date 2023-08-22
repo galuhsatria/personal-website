@@ -1,6 +1,6 @@
 export interface ProjectsProps {
   id: number;
-  src: string;
+  src: any;
   title: string;
   description: string;
   techs: string[];
