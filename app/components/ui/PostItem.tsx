@@ -10,7 +10,7 @@ export default function PostItem(props: PostMetadata) {
   return (
     <div className="border py-4 px-4 rounded-md md:w-full scale-100 hover:scale-[1.02] active:scale-[0.97] transition-all motion-safe:transform-gpu">
       <div className="h-40">
-        <Image src={header} alt={title} width={1440} height={792} className="rounded pointer-events-none object-cover w-full h-full shadow dark:shadow-none" />
+        <Image src={"/coming-soon.png"} alt={title} width={1440} height={792} className="rounded pointer-events-none object-cover w-full h-full shadow dark:shadow-none" />
       </div>
 
       <div className="mt-4">
