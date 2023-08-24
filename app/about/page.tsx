@@ -26,7 +26,7 @@ export default function About() {
         <div className="flex flex-col gap-5 mt-6" data-fade="2">
           <p>Hi, i&apos;m Galuh Satria You can call me Galuh, i&apos;m {age} years old. I started learning web development in December 2021, i learn web development from youtube, dicoding course, especially frontend development.</p>
           <p>Now Im studying at a university in Lombok, Nusa Tengara Barat majoring in computer sience from 2021, and I follow several communities on my campus such as the Google Developer Student Club</p>
-          <p> I enjoy learning something new and getting feedback to make myself better and improve, and curently learning NextJs.</p>
+          <p> I enjoy learning something new and getting feedback to make myself better and improve, and curently i learning NextJs.</p>
           <div>
             <h2 className="text-2xl my-4 font-bold">Current Favorite Tech Stack</h2>
             <div className="flex gap-4">
@@ -47,7 +47,7 @@ export default function About() {
                 </a>
               </li>
               <li>
-                LinkInd:{" "}
+                LinkedIn:{" "}
                 <a href="https://linkedin/in/galuh-satria-1002484210" className="text-blue-500 border-b">
                   Galuh Satria
                 </a>
