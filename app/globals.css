@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Kristi&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -106,5 +107,9 @@
   }
   .fade-in-start [data-fade='8'] {
     transition-delay: 800ms;
+  }
+
+  .logo{
+    font-family: 'Kristi', cursive;
   }
 }
