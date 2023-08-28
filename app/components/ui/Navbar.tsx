@@ -47,7 +47,6 @@ export default function Navbar() {
               </li>
             ))}
           </ul>
-          <p className="font-bold text-2xl sm:hidden logo">G</p>
         </div>
         <div className="">
           <Button variant="outline" size="icon" className="bg-transparent" onClick={() => setTheme(theme === "dark" ? "light" : "dark")}>
