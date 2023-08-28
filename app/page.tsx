@@ -14,7 +14,7 @@ export default function Home() {
     <main className="max-w-4xl mx-auto my-28 px-4">
       <section className={`${isLoaded && "fade-in-start"}`}>
         <div className=" flex sm:flex-row flex-col sm:items-center gap-6 ">
-          <Image src={profilPicture} alt="profil-picture" width={150} height={100} className="rounded-full object-contain" data-fade="1" />
+          <Image src={profilPicture} alt="profil-picture" width={150} height={100} className="rounded-full object-contain" data-fade="1" placeholder="blur" />
           <div data-fade="2">
             <h1 className="text-4xl font-bold">Galuh Satria</h1>
             <p className="text-lg mt-2 font-medium text-zinc-400 dark:text-accent">Software Developer</p>

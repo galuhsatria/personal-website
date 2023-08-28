@@ -2,9 +2,11 @@ import alquranApp from "@/assets/images/projects/alquran-app.png";
 import blogPage from "@/assets/images/projects/blog-page.png";
 import communityLandingPage from "@/assets/images/projects/community-landing-page.png";
 import waHelper from "@/assets/images/projects/wa-helper.png";
+import perkakas from "@/assets/images/projects/perkakas.png";
 
 import tailwind from "@/assets/images/skills/tailwindcss.svg";
 import react from "@/assets/images/skills/react.svg";
+import nextjs from "@/assets/images/skills/nextjs-icon-svgrepo-com.svg";
 
 import { ProjectsProps } from "../types";
 
@@ -23,7 +25,7 @@ export const projects: ProjectsProps[] = [
     src: blogPage,
     title: "Blog Page",
     description: "A simple blog page using MDX, just for trying ",
-    techs: [react, tailwind],
+    techs: [nextjs, tailwind],
     code: "https://github.com/galuhsatria/blog-page",
     visit: "https://blog-page-galuhsatria.vercel.app/",
   },
@@ -44,5 +46,14 @@ export const projects: ProjectsProps[] = [
     techs: [react, tailwind],
     code: "https://github.com/galuhsatria/whatsapp-messages-helper",
     visit: "https://whatsapp-messages-helper.vercel.app/",
+  },
+  {
+    id: 5,
+    src: perkakas,
+    title: "Tools",
+    description: "Here are some your favorite online tools",
+    techs: [nextjs, tailwind],
+    code: "https://github.com/galuhsatria/perkakas",
+    visit: "https://perkakas-galuhsatria.vercel.app/",
   },
 ];
