@@ -3,7 +3,7 @@ export interface ProjectsProps {
   src: any;
   title: string;
   description: string;
-  techs: string[];
+  techs: any[];
   code: string;
   visit: string;
 }

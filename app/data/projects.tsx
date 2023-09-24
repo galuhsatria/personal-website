@@ -7,6 +7,7 @@ import perkakas from "@/assets/images/projects/perkakas.png";
 import tailwind from "@/assets/images/skills/tailwindcss.svg";
 import react from "@/assets/images/skills/react.svg";
 import nextjs from "@/assets/images/skills/nextjs-icon-svgrepo-com.svg";
+import { SiNextdotjs, SiReact, SiTailwindcss } from "react-icons/si";
 
 import { ProjectsProps } from "../types";
 
@@ -16,7 +17,7 @@ export const projects: ProjectsProps[] = [
     src: alquranApp,
     title: "Al-Quran App",
     description: "Al-quran web version build with E-Quran API",
-    techs: [react, tailwind],
+    techs: [<SiReact />, <SiTailwindcss />],
     code: "https://github.com/galuhsatria/quran-app",
     visit: "https://galuhsatria-quran-app.vercel.app/",
   },
@@ -25,7 +26,7 @@ export const projects: ProjectsProps[] = [
     src: blogPage,
     title: "Blog Page",
     description: "A simple blog page using MDX, just for trying ",
-    techs: [nextjs, tailwind],
+    techs: [<SiNextdotjs />, <SiTailwindcss />],
     code: "https://github.com/galuhsatria/blog-page",
     visit: "https://blog-page-galuhsatria.vercel.app/",
   },
@@ -34,7 +35,7 @@ export const projects: ProjectsProps[] = [
     src: communityLandingPage,
     title: "Community Page",
     description: "A website to show a community information",
-    techs: [react, tailwind],
+    techs: [<SiReact />, <SiTailwindcss />],
     code: "https://github.com/galuhsatria/community-landing-page",
     visit: "https://community-landing-page-galuhsatria.vercel.app/",
   },
@@ -43,7 +44,7 @@ export const projects: ProjectsProps[] = [
     src: waHelper,
     title: "Wa Helper",
     description: "You can easily chat someone without saving number",
-    techs: [react, tailwind],
+    techs: [<SiReact />, <SiTailwindcss />],
     code: "https://github.com/galuhsatria/whatsapp-messages-helper",
     visit: "https://whatsapp-messages-helper.vercel.app/",
   },
@@ -52,7 +53,7 @@ export const projects: ProjectsProps[] = [
     src: perkakas,
     title: "Tools",
     description: "Here are some your favorite online tools",
-    techs: [nextjs, tailwind],
+    techs: [<SiNextdotjs />, <SiTailwindcss />],
     code: "https://github.com/galuhsatria/perkakas",
     visit: "https://perkakas-galuhsatria.vercel.app/",
   },

@@ -37,7 +37,7 @@ export default function MobileNav() {
         <ul className="flex justify-between">
           {links.map(({ href, label, icon }) => (
             <li key={`${href}${label}`}>
-              <Link href={href} className={`flex flex-col items-center  ${pathname === href ? "dark:text-white text-black" : "text-zinc-400"}`}>
+              <Link href={href} className={`flex flex-col items-center  ${pathname === href ? "text-accent-foreground" : "text-muted-foreground"}`}>
                 {icon}
                 {label}
               </Link>
