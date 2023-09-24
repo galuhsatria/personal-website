@@ -19,7 +19,7 @@ export default function ProjectItem(props: ProjectsProps) {
         <ul className="flex gap-3 mt-5">
           {techs.map((tech, index) => (
             <li className="text-2xl" key={index}>
-              {tech}
+              {tech.icon}
             </li>
           ))}
         </ul>
