@@ -21,7 +21,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <NextTopLoader showSpinner={false} height={2} shadow={false} />
+          <NextTopLoader showSpinner={false} height={2} shadow="0 0 #0000" crawlSpeed={400}/>
           <Navbar />
           {children}
           <Footer />
