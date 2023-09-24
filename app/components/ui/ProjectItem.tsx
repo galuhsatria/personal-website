@@ -18,7 +18,9 @@ export default function ProjectItem(props: ProjectsProps) {
         <p className="text-sm text-muted-foreground ">{description}</p>
         <ul className="flex gap-3 mt-5">
           {techs.map((tech, index) => (
-            <li className="text-2xl" key={index}>{tech}</li>
+            <li className="text-2xl" key={index}>
+              {tech}
+            </li>
           ))}
         </ul>
         <div className="flex gap-4 items-center mt-4">

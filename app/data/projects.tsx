@@ -4,9 +4,7 @@ import communityLandingPage from "@/assets/images/projects/community-landing-pag
 import waHelper from "@/assets/images/projects/wa-helper.png";
 import perkakas from "@/assets/images/projects/perkakas.png";
 
-import tailwind from "@/assets/images/skills/tailwindcss.svg";
-import react from "@/assets/images/skills/react.svg";
-import nextjs from "@/assets/images/skills/nextjs-icon-svgrepo-com.svg";
+
 import { SiNextdotjs, SiReact, SiTailwindcss } from "react-icons/si";
 
 import { ProjectsProps } from "../types";
