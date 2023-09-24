@@ -32,7 +32,7 @@ export default function MobileNav() {
   });
 
   return (
-    <nav className={`fixed bottom-0 sm:hidden backdrop-blur-xl border-t p-3 z-50 w-full mx-auto transition-all duration-300 ${visible && "bottom-[-75px]"}`}>
+    <nav className={`fixed bottom-0 sm:hidden dark:bg-[#121212] bg-white border-t border-border p-3 z-50 w-full mx-auto transition-all duration-300 ${visible && "bottom-[-75px]"}`}>
       <div className="max-w-4xl mx-auto">
         <ul className="flex justify-between">
           {links.map(({ href, label, icon }) => (

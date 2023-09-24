@@ -35,7 +35,7 @@ export default function Navbar() {
   });
 
   return (
-    <header className={`w-full backdrop-blur-xl border-b border-border px-4 py-3 fixed top-0 z-50 transition-all duration-300 ${visible ? "top-[-75px] " : ""}`}>
+    <header className={`w-full dark:bg-[#121212] bg-white border-b border-border px-4 py-3 fixed top-0 z-50 transition-all duration-300 ${visible ? "top-[-75px] " : ""}`}>
       <nav className="flex items-center max-w-4xl mx-auto" style={{ justifyContent: "space-between" }}>
         <div>
           <ul className="hidden sm:flex gap-6">
