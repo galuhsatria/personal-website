@@ -8,7 +8,7 @@ export default function ProjectItem(props: ProjectsProps) {
   const { id, src, title, description, techs, code, visit } = props;
 
   return (
-    <div className="py-4 px-4 rounded-md md:w-full rounded-lg border border-border text-card-foreground shadow-sm">
+    <div className="py-4 px-4 md:w-full rounded-lg border border-border text-card-foreground shadow-sm">
       <div className="">
         <Image src={src} alt={title} width={1440} height={792} className="rounded object-cover aspect-[4/3] h-max transition-all shadow dark:shadow-none" />
       </div>
