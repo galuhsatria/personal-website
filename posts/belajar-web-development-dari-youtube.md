@@ -2,7 +2,6 @@
 title: "Belajar Web Development dari Youtube"
 subtitle: "Daftar channel untuk belajar web development"
 date: "2023-27-09"
-header: "https://images.pexels.com/photos/929773/pexels-photo-929773.jpeg?auto=compress&cs=tinysrgb&w=600"
 ---
 
 Saya memulai belajar tentang web development pada awal tahun 2022, platform pertama yang saya gunakan untuk belajar web development adalah YouTube.

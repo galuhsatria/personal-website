@@ -17,6 +17,7 @@ export function FeaturedProject({ projects }: any) {
     </section>
   );
 }
+
 export function AllProjects({ projects }: any) {
   const isLoaded = useLoaded();
   return (

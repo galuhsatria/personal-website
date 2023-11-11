@@ -13,5 +13,4 @@ export interface PostMetadata {
   date: string;
   subtitle: string;
   slug: string;
-  header: string;
 }
