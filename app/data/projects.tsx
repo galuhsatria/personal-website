@@ -3,6 +3,7 @@ import blogPage from "@/assets/images/projects/blog-page.png";
 import communityLandingPage from "@/assets/images/projects/community-landing-page.png";
 import waHelper from "@/assets/images/projects/wa-helper.png";
 import perkakas from "@/assets/images/projects/perkakas.png";
+import quranQuiz from "@/assets/images/projects/quran-quiz.png";
 
 import { SiNextdotjs, SiReact, SiTailwindcss } from "react-icons/si";
 
@@ -68,5 +69,17 @@ export const projects: ProjectsProps[] = [
     ],
     code: "https://github.com/galuhsatria/perkakas",
     visit: "https://perkakas-galuhsatria.vercel.app/",
+  },
+  {
+    id: 5,
+    src: quranQuiz,
+    title: "Quran Quiz",
+    description: "Generating quizzes about the Quran",
+    techs: [
+      { name: "Next Js", icon: <SiNextdotjs /> },
+      { name: "Tailwind", icon: <SiTailwindcss /> },
+    ],
+    code: "https://github.com/galuhsatria/quran-quiz",
+    visit: "https://alquran-quiz.vercel.app/",
   },
 ];
