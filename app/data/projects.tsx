@@ -74,7 +74,7 @@ export const projects: ProjectsProps[] = [
     id: 5,
     src: quranQuiz,
     title: "Quran Quiz",
-    description: "Generating quizzes about the Quran",
+    description: "A feature to generating quizzes about the Quran",
     techs: [
       { name: "Next Js", icon: <SiNextdotjs /> },
       { name: "Tailwind", icon: <SiTailwindcss /> },
