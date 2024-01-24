@@ -1,13 +1,17 @@
-import fs from "fs";
-import Markdown from "markdown-to-jsx";
-import matter from "gray-matter";
-import getPostMetadata from "../../components/utils/getPostMetaData";
-import Image from "next/image";
+import fs from 'fs';
+import Markdown from 'markdown-to-jsx';
+import matter from 'gray-matter';
+import getPostMetadata from '../../components/utils/getPostMetaData';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Blog | Galuh Satria ',
+};
 
 const getPostContent = (slug: string) => {
-  const folder = "posts/";
+  const folder = 'posts/';
   const file = `${folder}${slug}.md`;
-  const content = fs.readFileSync(file, "utf8");
+  const content = fs.readFileSync(file, 'utf8');
   const matterResult = matter(content);
   return matterResult;
 };
@@ -22,8 +26,7 @@ export const generateStaticParams = async () => {
 const PostPage = (props: any) => {
   const slug = props.params.slug;
   const post = getPostContent(slug);
-  const { title, date} = post.data;
-  console.log(post);
+  const { title, date } = post.data;
   return (
     <main className="max-w-4xl mx-auto p-4 mt-7">
       <div className="mt-14">
