@@ -1,8 +1,10 @@
-"use client";
-import Image from "next/image";
-import Link from "next/link";
-import { BsFillRocketTakeoffFill, BsGithub } from "react-icons/bs";
-import { ProjectsProps } from "../../types";
+'use client';
+import Image from 'next/image';
+import Link from 'next/link';
+import { BsFillRocketTakeoffFill, BsGithub } from 'react-icons/bs';
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
+import { Button } from '@/components/ui/button';
+import { ProjectsProps } from '../../types';
 
 export default function ProjectItem(props: ProjectsProps) {
   const { id, src, title, description, techs, code, visit } = props;
@@ -16,10 +18,19 @@ export default function ProjectItem(props: ProjectsProps) {
       <div className="mt-4">
         <h1 className="font-bold text-xl">{title}</h1>
         <p className="text-sm text-muted-foreground ">{description}</p>
-        <ul className="flex gap-3 mt-5">
+        <ul className="flex gap-5 mt-5">
           {techs.map((tech, index) => (
-            <li className="text-2xl" key={index}>
-              {tech.icon}
+            <li className="text-2xl cursor-pointer" key={index}>
+              <TooltipProvider>
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <span>{tech.icon}</span>
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    <p>{tech.name}</p>
+                  </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
             </li>
           ))}
         </ul>
@@ -28,9 +39,11 @@ export default function ProjectItem(props: ProjectsProps) {
             Visit
             <BsFillRocketTakeoffFill />
           </Link>
-          <Link href={code} className="rounded-3xl  border border-border  px-4 py-2 flex items-center gap-2 hover:bg-accent" target="_blank">
-            Repository <BsGithub />
-          </Link>
+          {code && (
+            <Link href={code} className="rounded-3xl  border border-border  px-4 py-2 flex items-center gap-2 hover:bg-accent" target="_blank">
+              Repository <BsGithub />
+            </Link>
+          )}
         </div>
       </div>
     </div>
