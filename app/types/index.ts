@@ -4,7 +4,7 @@ export interface ProjectsProps {
   title: string;
   description: string;
   techs: any[];
-  code: string;
+  code?: string;
   visit: string;
 }
 
