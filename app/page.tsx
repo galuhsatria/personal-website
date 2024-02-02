@@ -24,7 +24,7 @@ export default function Home() {
         </div>
         <div className="mt-8" data-fade="2">
           <h1 className="text-2xl font-bold mb-2">Hi Im Galuh</h1>
-          <p>I contribute to the development of applications specializing in frontend web. Learning about web development, React / Next Js.</p>
+          <p>Frontend web developer passionate about mastering modern technologies like Next.js and React Native for both web and mobile app development.  Seeking to level up my skills and contribute significantly to the field.</p>
           <div className="flex gap-5 mt-4">
             <Link href={"https://github.com/galuhsatria"} className="flex flex-row items-center gap-[6px] text-muted-foreground hover:text-primary transition-colors  group w-max">
               <BsGithub className="group-hover:text-black dark:group-hover:text-white mt-1" />
