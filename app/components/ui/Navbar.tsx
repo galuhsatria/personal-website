@@ -34,6 +34,10 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   });
 
+  const changeTheme = () => {
+   setTheme(theme === 'dark' ? 'light' : 'dark')
+  }
+
   return (
     <header className={`w-full bg-background border-b border-border px-4 py-3 fixed top-0 z-50 transition-transform duration-300 ${visible ? '-translate-y-24' : ''}`}>
       <nav className="flex items-center max-w-4xl mx-auto" style={{ justifyContent: 'space-between' }}>
@@ -49,7 +53,7 @@ export default function Navbar() {
           </ul>
         </div>
         <div className="">
-          <Button variant="outline" size="icon" className="bg-transparent" onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}>
+          <Button variant="outline" size="icon" className="bg-transparent" onClick={changeTheme}>
             {mounted ? <>{theme === 'light' ? <RxMoon /> : <RxSun />}</> : <RxSun />}
           </Button>
         </div>

@@ -1,6 +1,6 @@
 ---
 title: "Belajar Web Development dari Youtube"
-subtitle: "Daftar channel untuk belajar web development"
+subtitle: "Daftar channel untuk kamu yang sedang belajar web development"
 date: "2023-27-09"
 ---
 

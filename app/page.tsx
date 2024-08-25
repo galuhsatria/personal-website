@@ -13,7 +13,7 @@ import useLoaded from "./hooks/useLoaded";
 export default function Home() {
   const isLoaded = useLoaded();
   return (
-    <main className="max-w-4xl mx-auto my-28 px-4">
+    <main className="max-w-4xl mx-auto max-md:px-4 my-28">
       <section className={`${isLoaded && "fade-in-start"}`}>
         <div className=" flex sm:flex-row flex-col sm:items-center gap-6 ">
           <Image src={profilPicture} alt="profil-picture" width={150} height={100} className="rounded-full object-contain" data-fade="0" placeholder="blur" />
@@ -40,7 +40,7 @@ export default function Home() {
         <div className="mt-12" data-fade="3">
           <h1 className="text-2xl font-bold">Featured Projects</h1>
           <FeaturedProject projects={projects} />
-          <Link href={"/projects"} className="flex items-center group mt-4 text-muted-foreground hover:text-primary transition-colors font-semibold w-max">
+          <Link href="/projects" className="flex items-center group mt-4 text-muted-foreground hover:text-primary transition-colors font-semibold w-max">
             See All Projects <HiOutlineArrowNarrowRight className="group-hover:ml-2 transition-all" />
           </Link>
         </div>

@@ -8,7 +8,7 @@ export default function Projects() {
   const isLoaded = useLoaded();
   return (
     <main>
-      <section className={`my-28 max-w-4xl mx-auto px-4 ${isLoaded && 'fade-in-start'}`}>
+      <section className={`my-28 max-w-4xl max-md:px-4 mx-auto ${isLoaded && 'fade-in-start'}`}>
         <h1 className="text-4xl font-bold" data-fade="1">
           Projects
         </h1>

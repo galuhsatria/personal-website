@@ -11,7 +11,7 @@ export default function Blog() {
   const postMetadata = getPostMetadata();
   return (
     <main>
-      <div className="my-28 max-w-4xl mx-auto px-4 min-h-screen">
+      <div className="my-28 max-w-4xl max-md:px-4 mx-auto min-h-screen">
         <AllPost posts={postMetadata} />
       </div>
     </main>
