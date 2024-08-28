@@ -34,4 +34,4 @@ Berikut adalah 5 Chrome Extensions yang dapat mepermudahmu dalam mengembangkan w
 
    ![image.png](/post/extentions-chrome/lightHouse.png)
 
-   **[Lighthouse](https://chromewebstore.google.com/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk)** memungkinkan kita untuk menguji kinerja dari website kita. Lighthouse dapat mengehasilkan laporan seperti performance, accessibiliy dan SEO dari website kita.
+   **[Lighthouse](https://chromewebstore.google.com/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk)** memungkinkan kita untuk menguji kinerja dari website kita. Lighthouse dapat mengehasilkan laporan seperti performance, accessibility dan SEO dari website kita.
