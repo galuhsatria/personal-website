@@ -27,7 +27,7 @@ export default function About() {
           <div data-fade="1">
             <p>Hi, i&apos;m Galuh Satria You can call me Galuh, i&apos;m {age} years old. I started learning web development in December 2021, i learn web development from youtube, especially frontend development.</p>
             <p>Now Im studying at a university in Lombok, Nusa Tengara Barat majoring in computer sience from 2021, and I follow several communities on my campus such as the Google Developer Student Club</p>
-            <p> I enjoy learning something new and getting feedback to make myself better and improve, and curently i learning NextJs.</p>
+            <p> I enjoy learning something new and getting feedback to make myself better and improve.</p>
             <div>
               <h2 className="text-2xl my-4 font-bold">Current Favorite Tech Stack</h2>
               <div className="flex gap-4">
