@@ -47,7 +47,7 @@ const PostPage = (props: any) => {
   return (
     <main className="max-w-4xl mx-auto py-4 max-md:px-4 mt-7">
       <div className="mt-14">
-        <h1 className="text-4xl font-bold my-7">{title}</h1>
+        <h1 className="text-4xl max-md:text-2xl font-bold my-7">{title}</h1>
         <p className="mt-2 text-muted-foreground">Written on {date} by Galuh</p>
       </div>
       
