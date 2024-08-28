@@ -1,5 +1,5 @@
 ---
-title: '5 Chrome Extensions Wajib Buat Frontend'
+title: '5 Chrome Extensions Yang Harus Kamu Ketahui Sebagai Seorang Web Dev'
 subtitle: 'Chrome Extensions yang dapat mepermudah mu dalam mengembangkan website'
 date: '2024-25-08'
 ---
@@ -16,7 +16,7 @@ Berikut adalah 5 Chrome Extensions yang dapat mepermudahmu dalam mengembangkan w
 
    ![image.png](/post/extentions-chrome/whatFont.png)
 
-   Pasti sebagai Frontend Developer pernah penasaran font apa yang dipakai di website yang sedang kita kunjungi. **[WhatFont](https://chromewebstore.google.com/detail/whatfont/jabopobgcpjmedljpbcaablpmlmfcogm)** adalah extensions yang bisa kamu pakai buat melihat font apa yang dipakai pada web terebut. Tinggal click pada text nya maka akan muncul informasi detail font yang dipakai.
+   Pasti sebagai Web Developer pernah penasaran font apa yang dipakai di website yang sedang kita kunjungi. **[WhatFont](https://chromewebstore.google.com/detail/whatfont/jabopobgcpjmedljpbcaablpmlmfcogm)** adalah extensions yang bisa kamu pakai buat melihat font apa yang dipakai pada web terebut. Tinggal click pada text nya maka akan muncul informasi detail font yang dipakai.
 
 3. **ColorZila**
 
