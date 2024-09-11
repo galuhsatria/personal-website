@@ -5,6 +5,7 @@ import waHelper from '@/assets/images/projects/wa-helper.png';
 import perkakas from '@/assets/images/projects/perkakas.png';
 import quranQuiz from '@/assets/images/projects/quran-quiz.png';
 import kasaTalk from '@/assets/images/projects/kasa-talk.png';
+import pcbumigora from '@/assets/images/projects/pcbumigora.png';
 
 import { SiNextdotjs, SiReact, SiTailwindcss, SiFirebase, SiPlanetscale, SiExpress } from 'react-icons/si';
 
@@ -96,5 +97,16 @@ export const projects: ProjectsProps[] = [
       { name: 'Express JS', icon: <SiExpress /> },
     ],
     visit: 'https://kasatalk.vercel.app/',
+  },
+  {
+    id: 7,
+    src: pcbumigora,
+    title: 'PC Bumigora',
+    description: 'A platform that provides information about PC Bumigora',
+    techs: [
+      { name: 'Next Js', icon: <SiNextdotjs /> },
+      { name: 'Tailwind', icon: <SiTailwindcss /> }
+    ],
+    visit: 'https://pcbumigora.vercel.app/',
   },
 ];
