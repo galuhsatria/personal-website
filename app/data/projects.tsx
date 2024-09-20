@@ -107,6 +107,6 @@ export const projects: ProjectsProps[] = [
       { name: 'Next Js', icon: <SiNextdotjs /> },
       { name: 'Tailwind', icon: <SiTailwindcss /> }
     ],
-    visit: 'https://pcbumigora.vercel.app/',
+    visit: 'https://www.pcbumigora.online/',
   },
 ];
