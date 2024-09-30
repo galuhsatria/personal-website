@@ -7,7 +7,7 @@ import quranQuiz from '@/assets/images/projects/quran-quiz.png';
 import kasaTalk from '@/assets/images/projects/kasa-talk.png';
 import pcbumigora from '@/assets/images/projects/pcbumigora.png';
 
-import { SiNextdotjs, SiReact, SiTailwindcss, SiFirebase, SiPlanetscale, SiExpress } from 'react-icons/si';
+import { SiNextdotjs, SiReact, SiTailwindcss, SiFirebase, SiPlanetscale, SiExpress, SiSupabase,  SiPrisma } from 'react-icons/si';
 
 import { ProjectsProps } from '../types';
 
@@ -105,7 +105,9 @@ export const projects: ProjectsProps[] = [
     description: 'A platform that provides information about PC Bumigora',
     techs: [
       { name: 'Next Js', icon: <SiNextdotjs /> },
-      { name: 'Tailwind', icon: <SiTailwindcss /> }
+      { name: 'Tailwind', icon: <SiTailwindcss /> },
+      { name: 'Prisma', icon: <SiPrisma /> },
+      { name:'Supabase', icon: SiSupabase /> }
     ],
     visit: 'https://www.pcbumigora.online/',
   },
