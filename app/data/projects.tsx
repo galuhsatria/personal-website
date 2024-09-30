@@ -107,7 +107,7 @@ export const projects: ProjectsProps[] = [
       { name: 'Next Js', icon: <SiNextdotjs /> },
       { name: 'Tailwind', icon: <SiTailwindcss /> },
       { name: 'Prisma', icon: <SiPrisma /> },
-      { name:'Supabase', icon: SiSupabase /> }
+      { name:'Supabase', icon: <SiSupabase /> }
     ],
     visit: 'https://www.pcbumigora.online/',
   },
