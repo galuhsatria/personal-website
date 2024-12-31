@@ -43,7 +43,7 @@ const getAccessToken = async () => {
   return res.data.access_token;
 };
 
-export const getNowPlaying = async () => {
+const getNowPlaying = async () => {
   const access_token = await getAccessToken();
 
   return axios.get<SpotifyData>(NOW_PLAYING_ENDPOINT, {
