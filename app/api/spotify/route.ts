@@ -49,7 +49,6 @@ const getNowPlaying = async (): Promise<SpotifyData | null> => {
     const response = await axios.get<SpotifyData>(NOW_PLAYING_ENDPOINT, {
       headers: {
         Authorization: `Bearer ${access_token}`,
-        'Cache-Control': 'no-cache, no-store, must-revalidate',
       },
     });
 
@@ -68,9 +67,7 @@ export async function GET(req: NextRequest) {
   const data = await getNowPlaying();
 
   if (!data) {
-    return NextResponse.json(
-      { isPlaying: false }
-    );
+    return NextResponse.json({ isPlaying: false }, { headers: { 'Cache-Control': 'no-store' } });
   }
 
   const responseData = {
@@ -82,5 +79,5 @@ export async function GET(req: NextRequest) {
     songUrl: data.item.external_urls.spotify,
   };
 
-  return NextResponse.json(responseData);
+  return NextResponse.json(responseData, { headers: { 'Cache-Control': 'no-store' } });
 }
