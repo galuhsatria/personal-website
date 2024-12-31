@@ -1,5 +1,4 @@
-import { NextRequest } from 'next/server';
-import { headers } from 'next/headers';
+import { NextRequest, NextResponse } from 'next/server';
 
 const SPOTIFY_CLIENT_ID = process.env.SPOTIFY_CLIENT_ID!;
 const SPOTIFY_CLIENT_SECRET = process.env.SPOTIFY_CLIENT_SECRET!;
@@ -9,8 +8,9 @@ const token = Buffer.from(`${SPOTIFY_CLIENT_ID}:${SPOTIFY_CLIENT_SECRET}`).toStr
 const NOW_PLAYING_ENDPOINT = `https://api.spotify.com/v1/me/player/currently-playing`;
 const TOKEN_ENDPOINT = `https://accounts.spotify.com/api/token`;
 
-const CACHE_MAX_AGE = 30; 
-const STALE_WHILE_REVALIDATE = 15; 
+// Shorter cache times for more frequent updates
+const CACHE_MAX_AGE = 30; // 30 seconds max age
+const STALE_WHILE_REVALIDATE = 15; // 15 seconds stale while revalidate
 
 interface SpotifyData {
   is_playing: boolean;
@@ -54,6 +54,7 @@ async function getNowPlaying(access_token: string) {
     headers: {
       Authorization: `Bearer ${access_token}`,
     },
+    // Disable caching at this level to ensure fresh data
     cache: 'no-store',
   });
 
@@ -66,17 +67,22 @@ async function getNowPlaying(access_token: string) {
 
 export async function GET(request: NextRequest) {
   try {
-    const responseHeaders = new Headers({
+    const responseHeaders = {
       'Content-Type': 'application/json',
       'Cache-Control': `public, s-maxage=${CACHE_MAX_AGE}, stale-while-revalidate=${STALE_WHILE_REVALIDATE}`,
-    });
+    };
 
+    // Get fresh access token
     const access_token = await getAccessToken();
-
+    
+    // Get currently playing track
     const response = await getNowPlaying(access_token);
 
     if (!response || response.currently_playing_type !== 'track') {
-      return Response.json({ isPlaying: false }, { headers: responseHeaders });
+      return NextResponse.json(
+        { isPlaying: false },
+        { headers: responseHeaders }
+      );
     }
 
     const data = {
@@ -88,9 +94,15 @@ export async function GET(request: NextRequest) {
       songUrl: response.item.external_urls.spotify,
     };
 
-    return Response.json(data, { headers: responseHeaders });
+    return NextResponse.json(data, { headers: responseHeaders });
   } catch (error) {
     console.error('Error fetching Spotify data:', error);
-    return Response.json({ error: 'Failed to load currently playing track' }, { status: 500 });
+    return NextResponse.json(
+      { error: 'Failed to load currently playing track' },
+      { status: 500 }
+    );
   }
 }
+
+// Enable edge runtime for better performance
+export const runtime = 'edge';
