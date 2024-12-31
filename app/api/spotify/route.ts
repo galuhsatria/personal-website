@@ -1,10 +1,6 @@
 import { NextResponse } from 'next/server';
 
-const {
-  SPOTIFY_CLIENT_ID: client_id,
-  SPOTIFY_CLIENT_SECRET: client_secret,
-  SPOTIFY_REFRESH_TOKEN: refresh_token,
-} = process.env;
+const { SPOTIFY_CLIENT_ID: client_id, SPOTIFY_CLIENT_SECRET: client_secret, SPOTIFY_REFRESH_TOKEN: refresh_token } = process.env;
 
 const basic = Buffer.from(`${client_id}:${client_secret}`).toString('base64');
 const NOW_PLAYING_ENDPOINT = `https://api.spotify.com/v1/me/player/currently-playing`;
@@ -21,6 +17,7 @@ const getAccessToken = async () => {
       grant_type: 'refresh_token',
       refresh_token: refresh_token || '',
     }).toString(),
+    next: { revalidate: 1 },
   });
 
   if (!response.ok) {
@@ -40,6 +37,7 @@ export async function GET() {
       headers: {
         Authorization: `Bearer ${access_token}`,
       },
+      next: { revalidate: 1 },
     });
 
     if (response.status === 204 || response.status > 400) {
@@ -56,9 +54,7 @@ export async function GET() {
       isPlaying: data.is_playing,
       title: data.item.name,
       album: data.item.album.name,
-      artist: data.item.album.artists
-        .map((artist: any) => artist.name)
-        .join(', '),
+      artist: data.item.album.artists.map((artist: any) => artist.name).join(', '),
       albumImageUrl: data.item.album.images[0].url,
       songUrl: data.item.external_urls.spotify,
     };
