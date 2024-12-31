@@ -74,19 +74,19 @@ export default function About() {
           </div>
         </div>
 
-        <div className="pt-10" data-fade="3">
-          <p className="font-bold text-xl mb-1">Currently playing on my Spotify</p>
-          <p className="text-sm text-gray-400">I really like listening to music 😅</p>
+        {data && data.isPlaying && (
+          <div className="pt-10" data-fade="3">
+            <p className="font-bold text-xl mb-1">Currently playing on my Spotify</p>
+            <p className="text-sm text-gray-400">I really like listening to music 😅</p>
 
-          <div className="mt-5">
-            {data && data.isPlaying ? (
+            <div className="mt-5">
               <a
                 target="_blank"
                 rel="noopener noreferer"
                 href={data?.isPlaying ? data.songUrl : 'https://open.spotify.com/user/31wok5dqph7tf7rl2vvholhpbpp4'}
                 className="relative flex w-72 items-center space-x-4 rounded-md border border-border p-5 transition-shadow hover:shadow-md bg-[#1E1F1E]"
               >
-                <div className="w-16">{data?.isPlaying ? <img className="w-16 shadow-sm" src={data?.albumImageUrl} alt={data?.album} /> : <SiSpotify size={64} color={'#1ED760'} />}</div>
+                <div className="w-16">{data?.isPlaying ? <img className="w-16 shadow-sm rounded-md" src={data?.albumImageUrl} alt={data?.album} /> : <SiSpotify size={64} color={'#1ED760'} />}</div>
 
                 <div className="flex-1">
                   <p className="component font-bold">{data?.isPlaying ? data.title : 'Not Listening'}</p>
@@ -96,16 +96,9 @@ export default function About() {
                   <SiSpotify size={20} color={'#1ED760'} />
                 </div>
               </a>
-            ) : (
-              <div className="relative flex w-72 items-center space-x-4 rounded-md border border-border p-5 transition-shadow hover:shadow-md bg-[#1E1F1E]">
-                <p>Not Listening </p>
-                <div className="absolute bottom-1.5 right-1.5">
-                  <SiSpotify size={20} color={'#1ED760'} />
-                </div>
-              </div>
-            )}
+            </div>
           </div>
-        </div>
+        )}
       </section>
     </main>
   );

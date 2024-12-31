@@ -1,13 +1,16 @@
-import axios from 'axios';
-import { NextApiRequest, NextApiResponse } from 'next/types';
-import querystring from 'querystring';
-import { NextResponse } from 'next/server';
+import { NextRequest } from 'next/server';
+import { headers } from 'next/headers';
 
-const { SPOTIFY_CLIENT_ID: client_id, SPOTIFY_CLIENT_SECRET: client_secret, SPOTIFY_REFRESH_TOKEN: refresh_token } = process.env;
+const SPOTIFY_CLIENT_ID = process.env.SPOTIFY_CLIENT_ID!;
+const SPOTIFY_CLIENT_SECRET = process.env.SPOTIFY_CLIENT_SECRET!;
+const SPOTIFY_REFRESH_TOKEN = process.env.SPOTIFY_REFRESH_TOKEN!;
 
-const token = Buffer.from(`${client_id}:${client_secret}`).toString('base64');
+const token = Buffer.from(`${SPOTIFY_CLIENT_ID}:${SPOTIFY_CLIENT_SECRET}`).toString('base64');
 const NOW_PLAYING_ENDPOINT = `https://api.spotify.com/v1/me/player/currently-playing`;
 const TOKEN_ENDPOINT = `https://accounts.spotify.com/api/token`;
+
+const CACHE_MAX_AGE = 30; 
+const STALE_WHILE_REVALIDATE = 15; 
 
 interface SpotifyData {
   is_playing: boolean;
@@ -16,7 +19,7 @@ interface SpotifyData {
     album: {
       name: string;
       artists: Array<{ name: string }>;
-      images: [{ url: string }];
+      images: Array<{ url: string }>;
     };
     external_urls: {
       spotify: string;
@@ -25,61 +28,69 @@ interface SpotifyData {
   currently_playing_type: string;
 }
 
-const getAccessToken = async () => {
-  const res = await axios.post<{ access_token: string }>(
-    TOKEN_ENDPOINT,
-    querystring.stringify({
+async function getAccessToken() {
+  const response = await fetch(TOKEN_ENDPOINT, {
+    method: 'POST',
+    headers: {
+      Authorization: `Basic ${token}`,
+      'Content-Type': 'application/x-www-form-urlencoded',
+    },
+    body: new URLSearchParams({
       grant_type: 'refresh_token',
-      refresh_token,
+      refresh_token: SPOTIFY_REFRESH_TOKEN,
     }),
-    {
-      headers: {
-        Authorization: `Basic ${token}`,
-        'Content-Type': 'application/x-www-form-urlencoded',
-      },
-    }
-  );
+  });
 
-  return res.data.access_token;
-};
+  if (!response.ok) {
+    throw new Error(`Failed to get access token: ${response.statusText}`);
+  }
 
-const getNowPlaying = async () => {
-  const access_token = await getAccessToken();
+  const data = await response.json();
+  return data.access_token;
+}
 
-  return axios.get<SpotifyData>(NOW_PLAYING_ENDPOINT, {
+async function getNowPlaying(access_token: string) {
+  const response = await fetch(NOW_PLAYING_ENDPOINT, {
     headers: {
       Authorization: `Bearer ${access_token}`,
     },
+    cache: 'no-store',
   });
-};
 
-export async function GET() {
-  const response = await getNowPlaying();
-
-  if (response.status === 204 || response.status > 400 || response.data.currently_playing_type !== 'track') {
-    // s-maxage=180 because a song usually lasts 3 minutes
-    return NextResponse.json(
-      { isPlaying: false },
-      {
-        headers: {
-          'Cache-Control': 'public, s-maxage=180, stale-while-revalidate=90',
-        },
-      }
-    );
+  if (response.status === 204 || response.status > 400) {
+    return null;
   }
 
-  const data = {
-    isPlaying: response.data.is_playing,
-    title: response.data.item.name,
-    album: response.data.item.album.name,
-    artist: response.data.item.album.artists.map((artist) => artist.name).join(', '),
-    albumImageUrl: response.data.item.album.images[0].url,
-    songUrl: response.data.item.external_urls.spotify,
-  };
+  return response.json();
+}
 
-  return NextResponse.json(data, {
-    headers: {
-      'Cache-Control': 'public, s-maxage=180, stale-while-revalidate=90',
-    },
-  });
+export async function GET(request: NextRequest) {
+  try {
+    const responseHeaders = new Headers({
+      'Content-Type': 'application/json',
+      'Cache-Control': `public, s-maxage=${CACHE_MAX_AGE}, stale-while-revalidate=${STALE_WHILE_REVALIDATE}`,
+    });
+
+    const access_token = await getAccessToken();
+
+    const response = await getNowPlaying(access_token);
+
+    if (!response || response.currently_playing_type !== 'track') {
+      return Response.json({ isPlaying: false }, { headers: responseHeaders });
+    }
+
+    const data = {
+      isPlaying: response.is_playing,
+      title: response.item.name,
+      album: response.item.album.name,
+      artist: response.item.album.artists.map((artist: { name: string }) => artist.name).join(', '),
+      albumImageUrl: response.item.album.images[0].url,
+      songUrl: response.item.external_urls.spotify,
+    };
+
+    return Response.json(data, { headers: responseHeaders });
+  } catch (error) {
+    console.error('Error fetching Spotify data:', error);
+    return Response.json({ error: 'Failed to load currently playing track' }, { status: 500 });
+  }
 }
