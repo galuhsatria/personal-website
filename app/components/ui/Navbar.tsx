@@ -10,36 +10,36 @@ import { useEffect, useState } from 'react';
 export default function Navbar() {
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
-  // const [prevScrollPos, setPrevScrollPos] = useState(0);
-  // const [visible, setVisible] = useState(false);
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
+  const [visible, setVisible] = useState(false);
   const pathname = usePathname();
 
   useEffect(() => setMounted(true), []);
 
-  // const handleScroll = () => {
-  //   const currentScrollPos = window.scrollY;
+  const handleScroll = () => {
+    const currentScrollPos = window.scrollY;
 
-  //   if (currentScrollPos > prevScrollPos) {
-  //     setVisible(true);
-  //   } else {
-  //     setVisible(false);
-  //   }
+    if (currentScrollPos > prevScrollPos) {
+      setVisible(true);
+    } else {
+      setVisible(false);
+    }
 
-  //   setPrevScrollPos(currentScrollPos);
-  // };
+    setPrevScrollPos(currentScrollPos);
+  };
 
-  // useEffect(() => {
-  //   window.addEventListener('scroll', handleScroll);
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
 
-  //   return () => window.removeEventListener('scroll', handleScroll);
-  // });
+    return () => window.removeEventListener('scroll', handleScroll);
+  });
 
   const changeTheme = () => {
    setTheme(theme === 'dark' ? 'light' : 'dark')
   }
 
   return (
-    <header className={`w-full bg-background border-b border-border px-4 py-3 fixed top-0 z-50 transition-transform duration-30`}>
+    <header className={`w-full bg-background border-b border-border px-4 py-3 fixed top-0 z-50 transition-transform duration-30 ${visible ? 'max-sm:-translate-y-24' : ''}`}>
       <nav className="flex items-center max-w-4xl mx-auto" style={{ justifyContent: 'space-between' }}>
         <div>
           <ul className="hidden sm:flex gap-6">

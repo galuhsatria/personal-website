@@ -6,7 +6,7 @@ export default function Experience() {
   const events = [
     {
       date: 'July 2024 - August 2024',
-      title: 'Frontend Developer at DISKOMINFOTIK NTB',
+      title: 'Frontend Developer Intern at DISKOMINFOTIK NTB',
       description: 'Developing UI for web GIS to show area of blankspot in NTB and creating UI for chatbot',
       icon: <FaBriefcase />,
     },
