@@ -76,7 +76,7 @@ export default function About() {
 
         <div className="pt-10" data-fade="3">
           <p className="font-bold text-xl mb-1">Currently playing on my Spotify</p>
-          <p className='text-sm text-gray-400'>I really like listening to music 😅</p>
+          <p className="text-sm text-gray-400">I really like listening to music 😅</p>
 
           <div className="mt-5">
             {data && data.isPlaying ? (
@@ -97,7 +97,12 @@ export default function About() {
                 </div>
               </a>
             ) : (
-              ''
+              <div className="relative flex w-72 items-center space-x-4 rounded-md border border-border p-5 transition-shadow hover:shadow-md bg-[#1E1F1E]">
+                <p>Not Listening </p>
+                <div className="absolute bottom-1.5 right-1.5">
+                  <SiSpotify size={20} color={'#1ED760'} />
+                </div>
+              </div>
             )}
           </div>
         </div>
