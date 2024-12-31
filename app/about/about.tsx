@@ -83,7 +83,7 @@ export default function About() {
               <a
                 target="_blank"
                 rel="noopener noreferer"
-                href={data?.isPlaying ? data.songUrl : 'https://open.spotify.com/user/erence21?si=yTsrZT5JSHOp7tn3ist7Ig'}
+                href={data?.isPlaying ? data.songUrl : 'https://open.spotify.com/user/31wok5dqph7tf7rl2vvholhpbpp4'}
                 className="relative flex w-72 items-center space-x-4 rounded-md border border-border p-5 transition-shadow hover:shadow-md bg-[#1E1F1E]"
               >
                 <div className="w-16">{data?.isPlaying ? <img className="w-16 shadow-sm" src={data?.albumImageUrl} alt={data?.album} /> : <SiSpotify size={64} color={'#1ED760'} />}</div>
