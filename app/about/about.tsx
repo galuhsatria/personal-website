@@ -1,7 +1,9 @@
+/* eslint-disable @next/next/no-img-element */
 'use client';
 import useLoaded from '@/hooks/useLoaded';
-import { SiNextdotjs, SiReact, SiTailwindcss } from 'react-icons/si';
-
+import Image from 'next/image';
+import { SiNextdotjs, SiReact, SiTailwindcss, SiSpotify } from 'react-icons/si';
+import useSWR from 'swr';
 
 export default function About() {
   const dob = new Date('2003-12-02');
@@ -14,6 +16,10 @@ export default function About() {
   };
 
   const age = calculateAge(dob, currentDate);
+
+  const fetcher = (url: string) => fetch(url).then((res) => res.json());
+
+  const { data } = useSWR('/api/spotify', fetcher);
 
   const isLoaded = useLoaded();
 
@@ -29,7 +35,7 @@ export default function About() {
             <p>Now Im studying at a university in Lombok, Nusa Tengara Barat majoring in computer sience from 2021, and I follow several communities on my campus such as the Google Developer Student Club</p>
             <p> I enjoy learning something new and getting feedback to make myself better and improve.</p>
             <div>
-              <h2 className="text-2xl my-4 font-bold">Current Favorite Tech Stack</h2>
+              <h2 className="text-xl my-6 font-bold">Current Favorite Tech Stack</h2>
               <div className="flex gap-4">
                 <SiNextdotjs className="text-4xl" />
                 <SiReact className="text-4xl" />
@@ -38,7 +44,7 @@ export default function About() {
             </div>
           </div>
           <div data-fade="2">
-            <h2 className="text-2xl my-6 font-bold">Contact</h2>
+            <h2 className="text-xl my-6 font-bold">Contact</h2>
             <ul className="list-disc ml-5 flex flex-col gap-2">
               <li>
                 Github:{' '}
@@ -65,6 +71,34 @@ export default function About() {
                 </a>
               </li>
             </ul>
+          </div>
+        </div>
+
+        <div className="pt-10" data-fade="3">
+          <p className="font-bold text-xl mb-1">Currently playing on my Spotify</p>
+          <p className='text-sm text-gray-400'>I really like listening to music 😅</p>
+
+          <div className="mt-5">
+            {data && data.isPlaying ? (
+              <a
+                target="_blank"
+                rel="noopener noreferer"
+                href={data?.isPlaying ? data.songUrl : 'https://open.spotify.com/user/erence21?si=yTsrZT5JSHOp7tn3ist7Ig'}
+                className="relative flex w-72 items-center space-x-4 rounded-md border border-border p-5 transition-shadow hover:shadow-md bg-[#1E1F1E]"
+              >
+                <div className="w-16">{data?.isPlaying ? <img className="w-16 shadow-sm" src={data?.albumImageUrl} alt={data?.album} /> : <SiSpotify size={64} color={'#1ED760'} />}</div>
+
+                <div className="flex-1">
+                  <p className="component font-bold">{data?.isPlaying ? data.title : 'Not Listening'}</p>
+                  <p className="font-dark text-xs">{data?.isPlaying ? data.artist : 'Spotify'}</p>
+                </div>
+                <div className="absolute bottom-1.5 right-1.5">
+                  <SiSpotify size={20} color={'#1ED760'} />
+                </div>
+              </a>
+            ) : (
+              ''
+            )}
           </div>
         </div>
       </section>
