@@ -71,7 +71,7 @@ export async function GET(req: NextRequest) {
       { isPlaying: false },
       {
         headers: {
-          'Cache-Control': 'public, s-maxage=180, stale-while-revalidate=90',
+          'Cache-Control': 'public',
         },
       }
     );
@@ -86,9 +86,5 @@ export async function GET(req: NextRequest) {
     songUrl: data.item.external_urls.spotify,
   };
 
-  return NextResponse.json(responseData, {
-    headers: {
-      'Cache-Control': 'public, s-maxage=180, stale-while-revalidate=90',
-    },
-  });
+  return NextResponse.json(responseData);
 }
