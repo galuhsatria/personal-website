@@ -1,7 +1,6 @@
 'use client';
 
 import Image from 'next/image';
-import profilPicture from '@/assets/images/profile/profil-picture.jpeg';
 import { projects } from './data/projects';
 import { FeaturedProject } from './components/utils/ProjectContent';
 import Link from 'next/link';
@@ -16,7 +15,7 @@ export default function Home() {
     <main className="max-w-4xl mx-auto max-md:px-4 my-28">
       <section className={`${isLoaded && 'fade-in-start'}`}>
         <div className=" flex sm:flex-row flex-col sm:items-center gap-6 ">
-          <Image src={profilPicture} alt="profil-picture" width={150} height={100} className="rounded-full object-contain" data-fade="0" placeholder="blur" />
+          <Image src={'/avatar.jpeg'} alt="profil-picture" width={150} height={100} className="rounded-full object-cover h-32 w-32" data-fade="0" unoptimized/>
           <div data-fade="1">
             <h1 className="text-4xl font-bold ">Galuh Satria</h1>
             <p className="text-lg mt-2 font-medium text-muted-foreground transition-colors">Frontend Developer</p>
