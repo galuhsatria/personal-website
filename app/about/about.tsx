@@ -54,7 +54,7 @@ export default function About() {
                 </a>
               </li>
               <li className='hover:text-blue-500 transition-colors'>
-                <a href="https://linkedin/in/galuhsatria" target="_balank" className="flex gap-2 items-center">
+                <a href="https://www.linkedin.com/in/galuhsatria/" target="_balank" className="flex gap-2 items-center">
                   <div className="border p-1 rounded-md border-border text-xl">
                     <SiLinkedin />
                   </div>
