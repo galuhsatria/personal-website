@@ -1,8 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 'use client';
 import useLoaded from '@/hooks/useLoaded';
-import Image from 'next/image';
-import { SiNextdotjs, SiReact, SiTailwindcss, SiSpotify, SiGithub, SiLinkedin, SiInstagram, SiX, SiTwitter } from 'react-icons/si';
+import { SiGithub, SiInstagram, SiLinkedin, SiNextdotjs, SiReact, SiSpotify, SiTailwindcss, SiX } from 'react-icons/si';
 import useSWR from 'swr';
 
 export default function About() {
@@ -73,7 +72,7 @@ export default function About() {
               <li className='hover:text-blue-500 transition-colors'>
                 <a href="https://twitter.com/galuhsatria___" target="_balank" className="flex gap-2 items-center">
                   <div className="border p-1 rounded-md border-border text-xl">
-                    <SiTwitter />
+                    <SiX />
                   </div>
                   X / twitter
                 </a>
