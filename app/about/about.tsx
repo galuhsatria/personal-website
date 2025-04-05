@@ -2,7 +2,7 @@
 'use client';
 import useLoaded from '@/hooks/useLoaded';
 import Image from 'next/image';
-import { SiNextdotjs, SiReact, SiTailwindcss, SiSpotify } from 'react-icons/si';
+import { SiNextdotjs, SiReact, SiTailwindcss, SiSpotify, SiGithub, SiLinkedin, SiInstagram, SiX, SiTwitter } from 'react-icons/si';
 import useSWR from 'swr';
 
 export default function About() {
@@ -26,8 +26,8 @@ export default function About() {
   return (
     <main>
       <section className={`my-28 max-w-4xl mx-auto max-md:px-4 ${isLoaded && 'fade-in-start'}`}>
-        <h1 data-fade="0" className="font-bold text-4xl">
-          About
+        <h1 data-fade="0" className="font-bold text-4xl ">
+          About Me
         </h1>
         <div className="flex flex-col gap-5 mt-6">
           <div data-fade="1">
@@ -45,29 +45,37 @@ export default function About() {
           </div>
           <div data-fade="2">
             <h2 className="text-xl my-6 font-bold">Contact</h2>
-            <ul className="list-disc ml-5 flex flex-col gap-2">
-              <li>
-                Github:{' '}
-                <a href="https://github.com/galuhsatria" className="text-blue-500 border-b">
-                  galuhsatria
+            <ul className="flex flex-wrap gap-6">
+              <li className='hover:text-blue-500 transition-colors'>
+                <a href="https://github.com/galuhsatria" target="_balank" className="flex gap-2 items-center">
+                  <div className="border p-1 rounded-md border-border text-xl">
+                    <SiGithub />
+                  </div>
+                  Github
                 </a>
               </li>
-              <li>
-                LinkedIn:{' '}
-                <a href="https://linkedin/in/galuh-satria-1002484210" className="text-blue-500 border-b">
-                  Galuh Satria
+              <li className='hover:text-blue-500 transition-colors'>
+                <a href="https://linkedin/in/galuhsatria" target="_balank" className="flex gap-2 items-center">
+                  <div className="border p-1 rounded-md border-border text-xl">
+                    <SiLinkedin />
+                  </div>
+                  LinkedIn
                 </a>
               </li>
-              <li>
-                Instagram:{' '}
-                <a href="https://www.instagram.com/galuhsatria._/" className="text-blue-500 border-b">
-                  galuhsatria._
+              <li className='hover:text-blue-500 transition-colors'>
+                <a href="https://www.instagram.com/galuhsatria._/" target="_balank" className="flex gap-2 items-center">
+                  <div className="border p-1 rounded-md border-border text-xl">
+                    <SiInstagram />
+                  </div>
+                  Instagram
                 </a>
               </li>
-              <li>
-                X / twitter:{' '}
-                <a href="https://twitter.com/galuhsatria___" className="text-blue-500 border-b">
-                  galuhsatria___
+              <li className='hover:text-blue-500 transition-colors'>
+                <a href="https://twitter.com/galuhsatria___" target="_balank" className="flex gap-2 items-center">
+                  <div className="border p-1 rounded-md border-border text-xl">
+                    <SiTwitter />
+                  </div>
+                  X / twitter
                 </a>
               </li>
             </ul>
