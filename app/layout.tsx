@@ -7,6 +7,7 @@ import Footer from "./components/ui/Footer";
 import MobileNav from "./components/ui/MobileNav";
 import NextTopLoader from "nextjs-toploader";
 const inter = Inter({ subsets: ["latin"] });
+import 'react-photo-view/dist/react-photo-view.css';
 
 export const metadata: Metadata = {
   title: "Galuh Satria ",

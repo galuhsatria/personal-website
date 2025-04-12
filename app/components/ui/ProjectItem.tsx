@@ -1,10 +1,10 @@
 'use client';
-import Image from 'next/image';
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 import Link from 'next/link';
 import { BsFillRocketTakeoffFill, BsGithub } from 'react-icons/bs';
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
-import { Button } from '@/components/ui/button';
 import { ProjectsProps } from '../../types';
+import ImageView from './ImageView';
+
 
 export default function ProjectItem(props: ProjectsProps) {
   const { id, src, title, description, techs, code, visit } = props;
@@ -12,7 +12,8 @@ export default function ProjectItem(props: ProjectsProps) {
   return (
     <div className="py-4 px-4 md:w-full rounded-lg border border-border text-card-foreground shadow-sm">
       <div className="">
-        <Image src={src} alt={title} width={1440} height={792} className="rounded object-cover aspect-[4/3] h-max transition-all shadow dark:shadow-none" />
+        <ImageView src={src} alt={title} width={1440} height={792} className="rounded object-cover aspect-[4/3] h-max transition-all shadow dark:shadow-none" />
+       
       </div>
 
       <div className="mt-4">
