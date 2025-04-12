@@ -30,7 +30,7 @@ export default function About() {
         </h1>
         <div className="flex flex-col gap-5 mt-6">
           <div data-fade="1">
-            <p>Hi, I&apos;m Galuh Satria, a 21-year-old web development enthusiast. I started learning web development in December 2021 through YouTube, focusing primarily on frontend development.</p>
+            <p>Hi, I&apos;m Galuh Satria, a {age}-year-old web development enthusiast. I started learning web development in December 2021 through YouTube, focusing primarily on frontend development.</p>
             <p> Currently, I am studying computer science at a university in Lombok, Nusa Tenggara Barat, and I am actively involved in several campus communities, including the Google Developer Student Club. </p>
             <p> I enjoy learning new things and appreciate feedback to help me improve.</p>
             <div>
@@ -45,7 +45,7 @@ export default function About() {
           <div data-fade="2">
             <h2 className="text-xl my-6 font-bold">Contact</h2>
             <ul className="flex flex-wrap gap-6">
-              <li className='hover:text-blue-500 transition-colors'>
+              <li className="hover:text-blue-500 transition-colors">
                 <a href="https://github.com/galuhsatria" target="_balank" className="flex gap-2 items-center">
                   <div className="border p-1 rounded-md border-border text-xl">
                     <SiGithub />
@@ -53,7 +53,7 @@ export default function About() {
                   Github
                 </a>
               </li>
-              <li className='hover:text-blue-500 transition-colors'>
+              <li className="hover:text-blue-500 transition-colors">
                 <a href="https://www.linkedin.com/in/galuhsatria/" target="_balank" className="flex gap-2 items-center">
                   <div className="border p-1 rounded-md border-border text-xl">
                     <SiLinkedin />
@@ -61,7 +61,7 @@ export default function About() {
                   LinkedIn
                 </a>
               </li>
-              <li className='hover:text-blue-500 transition-colors'>
+              <li className="hover:text-blue-500 transition-colors">
                 <a href="https://www.instagram.com/galuhsatria._/" target="_balank" className="flex gap-2 items-center">
                   <div className="border p-1 rounded-md border-border text-xl">
                     <SiInstagram />
@@ -69,7 +69,7 @@ export default function About() {
                   Instagram
                 </a>
               </li>
-              <li className='hover:text-blue-500 transition-colors'>
+              <li className="hover:text-blue-500 transition-colors">
                 <a href="https://twitter.com/galuhsatria___" target="_balank" className="flex gap-2 items-center">
                   <div className="border p-1 rounded-md border-border text-xl">
                     <SiX />
