@@ -45,7 +45,7 @@ export default function Navbar() {
           <ul className="hidden sm:flex gap-6">
             {links.map(({ href, label }) => (
               <li key={`${href}${label}`}>
-                <Link href={href} className={`dark:hover:text-white  hover:text-black rounded-md transition-all ${pathname === href || (pathname.startsWith('/blog/') && href === '/blog') ? 'dark:text-white text-black' : 'text-zinc-400'}`}>
+                <Link href={href} className={`dark:hover:text-white hover:text-black rounded-md hover:transition-colors ${pathname === href || (pathname.startsWith('/blog/') && href === '/blog') ? 'dark:text-white text-black' : 'text-zinc-400'}`}>
                   {label}
                 </Link>
               </li>
