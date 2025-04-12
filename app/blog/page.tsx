@@ -1,19 +1,17 @@
-import getPostMetadata from '../components/utils/getPostMetaData';
-import { AllPost } from '../components/utils/PostContent';
 import type { Metadata } from 'next';
+import { allPosts } from 'content-collections';
+import Link from 'next/link';
+import Blog from './blog';
 
 export const metadata: Metadata = {
-  title: 'Blog | Galuh Satria ',
+  title: 'Galuh Satria | Blog',
   description: 'This is a personal blog by Galuh Satria',
 };
 
-export default function Blog() {
-  const postMetadata = getPostMetadata();
+export default function Page() {
   return (
     <main>
-      <div className="my-28 max-w-4xl max-md:px-4 mx-auto min-h-screen">
-        <AllPost posts={postMetadata} />
-      </div>
+      <Blog />
     </main>
   );
 }
