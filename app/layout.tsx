@@ -8,6 +8,7 @@ import MobileNav from "./components/ui/MobileNav";
 import NextTopLoader from "nextjs-toploader";
 const inter = Inter({ subsets: ["latin"] });
 import 'react-photo-view/dist/react-photo-view.css';
+import { GeistSans } from "geist/font/sans";
 
 export const metadata: Metadata = {
   title: "Galuh Satria ",
@@ -20,7 +21,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={GeistSans.className}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <NextTopLoader showSpinner={false} height={2} shadow="0 0 #0000" crawlSpeed={400}/>
           <Navbar />
