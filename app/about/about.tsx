@@ -31,9 +31,9 @@ export default function About() {
         </h1>
         <div className="flex flex-col gap-5 mt-6">
           <div data-fade="1">
-            <p>Hi, i&apos;m Galuh Satria You can call me Galuh, i&apos;m {age} years old. I started learning web development in December 2021, i learn web development from youtube, especially frontend development.</p>
-            <p>Now Im studying at a university in Lombok, Nusa Tengara Barat majoring in computer sience from 2021, and I follow several communities on my campus such as the Google Developer Student Club</p>
-            <p> I enjoy learning something new and getting feedback to make myself better and improve.</p>
+            <p>Hi, I&apos;m Galuh Satria, a 21-year-old web development enthusiast. I started learning web development in December 2021 through YouTube, focusing primarily on frontend development.</p>
+            <p> Currently, I am studying computer science at a university in Lombok, Nusa Tenggara Barat, and I am actively involved in several campus communities, including the Google Developer Student Club. </p>
+            <p> I enjoy learning new things and appreciate feedback to help me improve.</p>
             <div>
               <h2 className="text-xl my-6 font-bold">Current Favorite Tech Stack</h2>
               <div className="flex gap-4">
