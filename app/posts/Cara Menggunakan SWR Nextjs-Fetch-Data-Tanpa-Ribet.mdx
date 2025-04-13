@@ -9,7 +9,7 @@ SWR adalah cara modern untuk melakukan data fetching di React dan Next.js. Dibua
 
 ### Apa Itu SWR?
 
-**SWR** singkatan dari *stale-while-revalidate*, sebuah strategi caching di mana data lama ditampilkan dulu, sambil mengambil data baru di belakang layar. Cocok banget buat aplikasi yang butuh **data up-to-date** tapi tetap responsif.
+**SWR** singkatan dari _stale-while-revalidate_, sebuah strategi caching di mana data lama ditampilkan dulu, sambil mengambil data baru di belakang layar. Cocok banget buat aplikasi yang butuh **data up-to-date** tapi tetap responsif.
 
 ### Instalasi
 
@@ -55,14 +55,13 @@ export default function Posts() {
     </div>
   );
 }
-
 ```
 
 ### Kenapa Pakai SWR?
 
-* &#x20;Otomatis handle loading, error, dan revalidasi
-* Cache otomatis & super cepat
-* Built-in retry & fallback
-* Bisa dipakai di Client-side maupun Server-side
+- &#x20;Otomatis handle loading, error, dan revalidasi
+- Cache otomatis & super cepat
+- Built-in retry & fallback
+- Bisa dipakai di Client-side maupun Server-side
 
 SWR bikin proses fetching data di Next.js jauh lebih simpel dan efisien. Cocok buat kamu yang pengen bikin aplikasi yang cepat, ringan, dan tetap up-to-date tanpa harus banyak mikirin lifecycle `useEffect`.
