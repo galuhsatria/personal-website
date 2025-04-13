@@ -9,7 +9,6 @@ const posts = defineCollection({
     title: z.string(),
     slug: z.string(),
     summary: z.string(),
-    thumbnail: z.string(),
     createdAt: z.string(),
   }),
   transform: async (document, context) => {
