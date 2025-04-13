@@ -7,13 +7,15 @@ import useLoaded from '@/hooks/useLoaded';
 export default function Blog() {
   const isLoaded = useLoaded();
 
+  const sortedPosts = allPosts.sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime());
+
   return (
     <section className={`my-28 max-w-4xl max-md:px-4 mx-auto min-h-screen ${isLoaded && 'fade-in-start'}`}>
       <h1 className="text-4xl font-bold " data-fade="1">
         <span className="dark:text-white text-black">Blog</span>
       </h1>
       <div className="mt-6">
-        {allPosts.map((post, index) => (
+        {sortedPosts.map((post, index) => (
           <div key={index} data-fade={index + 1}>
             <Link href={`/blog/${post.slug}`} className="mb-4 border border-border rounded-md p-4 flex gap-4 hover:bg-zinc-100 dark:hover:bg-zinc-800 justify-between max-sm:flex-col">
               <div className="w-[80%] max-sm:w-full">
