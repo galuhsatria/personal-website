@@ -1,9 +1,15 @@
 import React from 'react';
-import { FaBriefcase, FaGraduationCap, FaUsers } from 'react-icons/fa';
+import { FaBriefcase, FaGraduationCap, FaUsers, FaTrophy } from 'react-icons/fa';
 
 
 export default function Experience() {
   const events = [
+    {
+      date: 'April 2025',
+      title: 'PROXOCORIS International Competion 2025',
+      description: 'Winnner of the web development competition in the best functionality category',
+      icon: <FaTrophy />,
+    },
     {
       date: 'July 2024 - August 2024',
       title: 'Frontend Developer Intern at DISKOMINFOTIK NTB',
