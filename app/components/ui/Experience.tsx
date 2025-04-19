@@ -6,7 +6,7 @@ export default function Experience() {
   const events = [
     {
       date: 'April 2025',
-      title: 'PROXOCORIS International Competion 2025',
+      title: 'PROXOCORIS International Competition 2025',
       description: 'Winnner of the web development competition in the best functionality category',
       icon: <FaTrophy />,
     },
