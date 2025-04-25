@@ -9,6 +9,7 @@ import NextTopLoader from "nextjs-toploader";
 const inter = Inter({ subsets: ["latin"] });
 import 'react-photo-view/dist/react-photo-view.css';
 import { GeistSans } from "geist/font/sans";
+import Script from 'next/script'
 
 export const metadata: Metadata = {
   title: "Galuh Satria ",
@@ -21,6 +22,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
+     <Script src="https://example.com/script.js" />
       <body className={GeistSans.className}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <NextTopLoader showSpinner={false} height={2} shadow="0 0 #0000" crawlSpeed={400}/>
