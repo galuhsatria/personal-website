@@ -16,7 +16,7 @@ export async function generateMetadata(props: { params: Promise<{ slug: string }
   const ogImageUrl = process.env.NEXT_PUBLIC_WEB_DOMAIN + `/api/og?title=${encodeURIComponent(post.title)}&description=${encodeURIComponent(post.summary)}`;
 
   return {
-    title: post.title,
+    title: 'Galuh Satria | ' + post.title,
     openGraph: {
       title: 'Galuh Satria | ' + post.title,
       description: post.summary,
