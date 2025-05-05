@@ -3,7 +3,8 @@ import { MDXContent } from '@content-collections/mdx/react';
 import { allPosts } from 'content-collections';
 import 'highlight.js/styles/github-dark-dimmed.css';
 
-export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
+export async function generateMetadata(props: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const params = await props.params;
   const post = allPosts.find((p) => p.slug === params.slug);
 
   if (!post) {
