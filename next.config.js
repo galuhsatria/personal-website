@@ -1,9 +1,9 @@
 /** @type {import('next').NextConfig} */
-const { withContentCollections } = require("@content-collections/next");
+const { withContentCollections } = require('@content-collections/next');
 
 const nextConfig = {
   images: {
-    domains: ["images.pexels.com"],
+    domains: ['images.pexels.com'],
   },
 };
 
