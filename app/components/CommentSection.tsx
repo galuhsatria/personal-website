@@ -11,7 +11,7 @@ export default function CommentSection() {
         id="comments"
         repo="galuhsatria/personal-website"
         repoId="R_kgDOKKHOfQ"
-        category="Announcements"
+        category="General"
         categoryId="DIC_kwDOKKHOfc4Cp8eh"
         mapping="pathname"
         reactionsEnabled="1"
