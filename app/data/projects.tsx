@@ -1,6 +1,3 @@
-import alquranApp from '@/assets/images/projects/alquran-app.png';
-import blogPage from '@/assets/images/projects/blog-page.png';
-import communityLandingPage from '@/assets/images/projects/community-landing-page.png';
 import waHelper from '@/assets/images/projects/wa-helper.png';
 import perkakas from '@/assets/images/projects/perkakas.png';
 import quranQuiz from '@/assets/images/projects/quran-quiz.png';
