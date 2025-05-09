@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { MDXContent } from '@content-collections/mdx/react';
 import { allPosts } from 'content-collections';
 import 'highlight.js/styles/github-dark-dimmed.css';
+import CommentSection from '@/components/CommentSection';
 
 export async function generateMetadata(props: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const params = await props.params;
@@ -53,6 +54,10 @@ const Page = async (props: { params: Promise<{ slug: string }> }) => {
       <article className="prose dark:text-white prose-th:text-blue-700 dark:prose-strong:text-white dark:prose-blockquote:text-white dark:prose-headings:text-white prose-headings:font-bold prose-a:text-blue-700 dark:prose-code:text-white pt-4">
         <MDXContent code={post.mdx} />
       </article>
+
+      <div className="mt-8">
+        <CommentSection />
+      </div>
     </main>
   );
 };
