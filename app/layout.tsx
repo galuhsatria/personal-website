@@ -7,6 +7,7 @@ import MobileNav from './components/ui/MobileNav';
 import NextTopLoader from 'nextjs-toploader';
 import 'react-photo-view/dist/react-photo-view.css';
 import { GeistSans } from 'geist/font/sans';
+import { Toaster } from './components/ui/sonner';
 
 export const metadata: Metadata = {
   title: 'Galuh Satria',
@@ -47,6 +48,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           {children}
           <Footer />
           <MobileNav />
+          <Toaster position='top-center'/>
         </ThemeProvider>
       </body>
     </html>

@@ -9,6 +9,7 @@ import { BsGithub, BsLinkedin, BsTwitter } from 'react-icons/bs';
 import useLoaded from './hooks/useLoaded';
 import Experience from './components/ui/Experience';
 import { GrDocumentUser } from 'react-icons/gr';
+import EmailForm from './components/EmailForm';
 
 export default function Home() {
   const isLoaded = useLoaded();
@@ -58,6 +59,20 @@ export default function Home() {
         <div data-fade="4" className="mt-12">
           <h1 className="text-2xl font-bold dark:text-white text-black">Experience</h1>
           <Experience />
+        </div>
+
+        <div className="mt-12 bg-secondary p-4 rounded-lg" data-fade="4">
+          <div className="flex max-md:flex-col md:flex-row items-center gap-8">
+            <div className="w-full">
+              <h1 className="text-2xl font-bold dark:text-white text-black">Get it touch</h1>
+              <p className="text-sm text-muted-foreground mt-4">
+                I&apos;m always interested in exploring new opportunities, collaborating, or exchanging ideas with like-minded individuals. Feel free to email me if you&apos;d like to see my portfolio deck or to discuss a potential project.
+              </p>
+            </div>
+            <div className="w-full">
+              <EmailForm />
+            </div>
+          </div>
         </div>
       </section>
     </main>
