@@ -40,6 +40,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <head>
         <script defer src="https://cloud.umami.is/script.js" data-website-id="c5deca0e-365b-45e5-99ae-a6a10a10cb4a"></script>
+        <meta name="google-site-verification" content="dzq1psxM3O9eGTVFNSf4brHqOEhj6Z2S1LyLpoBdCU0" />
       </head>
       <body className={GeistSans.className}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
