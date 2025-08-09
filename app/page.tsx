@@ -14,7 +14,7 @@ import EmailForm from './components/EmailForm';
 export default function Home() {
   const isLoaded = useLoaded();
   return (
-    <main className="max-w-4xl mx-auto max-md:px-4 my-28">
+    <main className="max-w-4xl mx-auto max-md:px-4 mt-32 mb-20">
       <section className={`${isLoaded && 'fade-in-start'}`}>
         <div className=" flex sm:flex-row flex-col sm:items-center gap-6 ">
           <Image src={'/avatar.jpeg'} alt="profil-picture" width={150} height={100} className="rounded-full object-cover h-32 w-32" data-fade="0" unoptimized />

@@ -24,7 +24,7 @@ export default function About() {
 
   return (
     <main>
-      <section className={`my-28 max-w-4xl mx-auto max-md:px-4 ${isLoaded && 'fade-in-start'}`}>
+      <section className={`mt-28 mb-20 max-w-4xl mx-auto max-md:px-4 ${isLoaded && 'fade-in-start'}`}>
         <h1 data-fade="0">
           <span className="font-bold text-4xl text-black dark:text-white">About Me</span>
         </h1>
