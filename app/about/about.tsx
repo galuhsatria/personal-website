@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 'use client';
 import useLoaded from '@/hooks/useLoaded';
-import { SiGithub, SiInstagram, SiLinkedin, SiNextdotjs, SiReact, SiSpotify, SiTailwindcss, SiX } from 'react-icons/si';
+import { SiGithub, SiInstagram, SiLinkedin, SiNextdotjs, SiReact, SiSpotify, SiTailwindcss, SiX, SiLaravel, SiInertia } from 'react-icons/si';
 import useSWR from 'swr';
 
 export default function About() {
@@ -39,6 +39,8 @@ export default function About() {
                 <SiNextdotjs className="text-4xl text-black dark:text-white" />
                 <SiReact className="text-4xl text-black dark:text-white" />
                 <SiTailwindcss className="text-4xl text-black dark:text-white" />
+                <SiLaravel className="text-4xl text-black dark:text-white" />
+                <SiInertia className="text-4xl text-black dark:text-white" />
               </div>
             </div>
           </div>
