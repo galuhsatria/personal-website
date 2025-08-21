@@ -3,8 +3,9 @@ import perkakas from '@/assets/images/projects/perkakas.png';
 import quranQuiz from '@/assets/images/projects/quran-quiz.png';
 import kasaTalk from '@/assets/images/projects/kasa-talk.png';
 import pcbumigora from '@/assets/images/projects/pcbumigora.png';
+import cataai from '@/assets/images/projects/cata-ai.png'
 
-import { SiNextdotjs, SiReact, SiTailwindcss, SiFirebase, SiPlanetscale, SiExpress, SiSupabase,  SiPrisma } from 'react-icons/si';
+import { SiNextdotjs, SiReact, SiTailwindcss, SiFirebase, SiPlanetscale, SiExpress, SiSupabase,  SiPrisma, SiFastapi, SiTensorflow } from 'react-icons/si';
 
 import { ProjectsProps } from '../types';
 
@@ -71,5 +72,18 @@ export const projects: ProjectsProps[] = [
       { name:'Supabase', icon: <SiSupabase /> }
     ],
     visit: 'https://www.pcbumigora.online/',
+  },
+  {
+    id: 6,
+    src: cataai,
+    title: 'Cata AI',
+    description: 'A platform that provides cataract classification using CNN',
+    techs: [
+      { name: 'React Js', icon: <SiReact /> },
+      { name: 'Tailwind', icon: <SiTailwindcss /> },
+      { name: 'Fast API', icon: <SiFastapi /> },
+      { name:'Tensorflow', icon: <SiTensorflow /> }
+    ],
+    visit: 'https://www.cata-ai.vercel.app/',
   },
 ];
