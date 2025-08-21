@@ -84,6 +84,6 @@ export const projects: ProjectsProps[] = [
       { name: 'Fast API', icon: <SiFastapi /> },
       { name:'Tensorflow', icon: <SiTensorflow /> }
     ],
-    visit: 'https://www.cata-ai.vercel.app/',
+    visit: 'https://cata-ai.vercel.app/',
   },
 ];
