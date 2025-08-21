@@ -41,7 +41,7 @@ export default function Navbar() {
 
   return (
     <header className={`w-full mx-auto md:mt-2 max-sm:border-b border-border px-4 py-3 fixed top-0 z-50 transition-transform duration-30 max-sm:bg-background   ${visible ? 'max-sm:-translate-y-24' : ''}`}>
-      <nav className="flex items-center max-w-4xl md:border border-border mx-auto md:py-2 rounded-xl px-4 md:backdrop-blur-md md:bg-white/80 md:dark:bg-black/80 justify-between">
+      <nav className="flex items-center max-w-xl md:border border-border mx-auto md:py-2 rounded-full px-4 md:backdrop-blur-md md:bg-white/80 md:dark:bg-black/80 justify-between">
         <div>
           <ul className="hidden sm:flex gap-6">
             {links.map(({ href, label }) => (
