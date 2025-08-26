@@ -1,0 +1,91 @@
+{
+  "navigation": {
+    "home": "Beranda",
+    "projects": "Projects",
+    "blog": "Blog",
+    "about": "Tentang"
+  },
+  "home": {
+    "title": "Halo, Saya Galuh",
+    "subtitle": "Frontend Developer yang suka membangun produk yang bermanfaat untuk semua orang. Saya biasanya bekerja menggunakan teknologi seperti Next.js, Tailwind CSS, Prisma, dan beberapa teknologi hebat lainnya.",
+    "featureProjects": "Proyek Unggulan",
+    "viewAllProjects": "Lihat Semua Proyek",
+    "experience": {
+      "title": "Pengalaman",
+      "subtitle": "Berikut adalah beberapa pengalaman kerja saya",
+      "items": {
+        "proxocoris": {
+          "title": "Kompetisi Internasional PROXOCORIS 2025",
+          "subtitle": "Pemenang kompetisi pengembangan web dalam kategori fungsionalitas terbaik",
+          "date": "April 2025"
+        },
+        "diskominfotik": {
+          "title": "Magang Frontend Developer di DISKOMINFOTIK NTB",
+          "subtitle": "Mengembangkan antarmuka untuk web GIS guna menampilkan area blankspot di NTB dan membuat UI untuk chatbot",
+          "date": "Juli 2024 - Agustus 2024"
+        },
+        "dicoding": {
+          "title": "SIB Kampus Merdeka Frontend Web dan Backend di Dicoding",
+          "subtitle": "Mempelajari pengembangan frontend dan backend melalui kelas dari Dicoding dan mengembangkan proyek bernama Kasa Talk (kamus bahasa Sasak berbasis web)",
+          "date": "Agustus 2023 - Desember 2023"
+        },
+        "pc": {
+          "title": "PC Bumigora (Organisasi)",
+          "subtitle": "Berpartisipasi sebagai panitia di setiap acara yang diselenggarakan. Saya juga mengembangkan website untuk organisasi ini, bekerja sebagai fullstack dalam proses pengembangannya",
+          "date": "September 2023 - September 2024"
+        }
+      }
+    },
+    "contact": {
+      "title": "Hubungi Saya",
+      "subtitle": "Saya selalu tertarik untuk menjelajahi peluang baru, berkolaborasi, atau bertukar ide dengan orang-orang yang sejalan. Jangan ragu untuk mengirim email jika Anda ingin melihat portofolio saya atau mendiskusikan proyek potensial.",
+      "name": "Nama",
+      "email": "Email",
+      "message": "Pesan",
+      "sendMessage": "Kirim Pesan"
+    }
+  },
+  "projects": {
+    "title": "Proyek",
+    "visit": "Kunjungi",
+    "items": {
+      "cataai": {
+        "name": "Cata AI",
+        "description": "Platform yang menyediakan klasifikasi katarak menggunakan Deep Learning"
+      },
+      "pcbumigora": {
+        "name": "PC Bumigora",
+        "description": "Platform yang menyediakan informasi tentang PC Bumigora"
+      },
+      "kasaTalk": {
+        "name": "Kasa Talk",
+        "description": "Platform kamus bahasa Sasak berbasis website"
+      },
+      "quranQuiz": {
+        "name": "Quran Quiz",
+        "description": "Aplikasi kuis untuk membantu menghafal Al-Qur'an"
+      },
+      "perkakas": {
+        "name": "Perkakas",
+        "description": "Platform yang menyediakan berbagai alat daring"
+      },
+      "waHelper": {
+        "name": "WA Helper",
+        "description": "Memungkinkan Anda mengirim pesan WhatsApp tanpa menyimpan nomor"
+      }
+    }
+  },
+  "about": {
+    "title": "Tentang Saya",
+    "description": {
+      "paragraph1": "Halo, saya Galuh Satria, seorang penggemar pengembangan web berusia {{age}} tahun. Saya mulai belajar pengembangan web pada Desember 2021 melalui YouTube dengan fokus utama pada frontend development.",
+      "paragraph2": "Saat ini, saya sedang menempuh pendidikan ilmu komputer di salah satu universitas di Lombok, Nusa Tenggara Barat, dan aktif terlibat dalam beberapa komunitas kampus, termasuk Google Developer Student Club.",
+      "paragraph3": "Saya senang mempelajari hal-hal baru dan menghargai masukan untuk membantu saya berkembang."
+    },
+    "favoriteTechStack": "Teknologi Favorit Saat Ini",
+    "contact": "Kontak",
+    "spotify": "Sedang Diputar di Spotify Saya",
+    "spotifySubtitle": "Saya sangat suka mendengarkan musik 😅",
+    "listening": "Tidak sedang mendengarkan"
+  }
+}

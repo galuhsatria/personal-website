@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const { withContentCollections } = require('@content-collections/next');
+const withNextIntl = require('next-intl/plugin')('./app/lib/i18n.ts');
 
 const nextConfig = {
   images: {
@@ -7,4 +8,4 @@ const nextConfig = {
   },
 };
 
-module.exports = withContentCollections(nextConfig);
+module.exports = withNextIntl(withContentCollections(nextConfig));

@@ -1,0 +1,91 @@
+{
+  "navigation": {
+    "home": "Home",
+    "projects": "Projects",
+    "blog": "Blog",
+    "about": "About"
+  },
+  "home": {
+    "title": "Hi Im Galuh",
+    "subtitle": "Frontend Developer who likes to build a product that can be useful for everyone. I usually work using technologies such as Next Js, Tailwind CSS, Prisma and some other great technologies.",
+    "featureProjects": "Feature Projects",
+    "viewAllProjects": "See All Projects",
+    "experience": {
+      "title": "Experience",
+      "subtitle": "Here are some of my work experiences",
+      "items": {
+        "proxocoris": {
+          "title": "PROXOCORIS International Competition 2025",
+          "subtitle": "Winnner of the web development competition in the best functionality category",
+          "date": "April 2025"
+        },
+        "diskominfotik": {
+          "title": "Frontend Developer Intern at DISKOMINFOTIK NTB",
+          "subtitle": "Developing UI for web GIS to show area of blankspot in NTB and creating UI for chatbot",
+          "date": "July 2024 - August 2024"
+        },
+        "dicoding": {
+          "title": "SIB Kampus Merdeka Frontend web and Backend at Dicoding",
+          "subtitle": "Learn about web frontend and backend development through classes provided by dicoding and develop a project called Kasa Talk (website-based Sasak language dictionary)",
+          "date": "August 2023 - December 2023"
+        },
+        "pc": {
+          "title": "PC Bumigora (organization)",
+          "subtitle": "Participate as a committee in every event held. I also developed a website for the organization, I work as a fullstack in developing the website",
+          "date": "September 2023 - September 2024"
+        }
+      }
+    },
+    "contact": {
+      "title": "Get in touch",
+      "subtitle": "I'm always interested in exploring new opportunities, collaborating, or exchanging ideas with like-minded individuals. Feel free to email me if you'd like to see my portfolio deck or to discuss a potential project.",
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "sendMessage": "Send Message"
+    }
+  },
+  "projects": {
+    "title": "Projects",
+    "visit": "Visit Site",
+    "items": {
+      "cataai": {
+        "name": "Cata AI",
+        "description": "A platform that provides cataract classification using Deep Learning"
+      },
+      "pcbumigora": {
+        "name": "PC Bumigora",
+        "description": "A platform that provides information about PC Bumigora"
+      },
+      "kasaTalk": {
+        "name": "Kasa Talk",
+        "description": "A website-based  Sasak language dictionary"
+      },
+      "quranQuiz": {
+        "name": "Quran Quiz",
+        "description": "A quiz application to help memorize the Quran"
+      },
+      "perkakas": {
+        "name": "Perkakas",
+        "description": "A platform that provides common online tools"
+      },
+      "waHelper": {
+        "name": "WA Helper",
+        "description": "You can easily chat someone without saving number"
+      }
+    }
+  },
+  "about": {
+    "title": "About Me",
+    "description": {
+      "paragraph1": "Hi, I'm Galuh Satria, a {{age}}-year-old web development enthusiast. I started learning web development in December 2021 through YouTube, focusing primarily on frontend development.",
+      "paragraph2": "Currently, I am studying computer science at a university in Lombok, Nusa Tenggara Barat, and I am actively involved in several campus communities, including the Google Developer Student Club.",
+      "paragraph3": "I enjoy learning new things and appreciate feedback to help me improve."
+    },
+    "favoriteTechStack": "Current Favorite Tech Stack",
+    "contact": "Contact",
+    "spotify": "Currently playing on my Spotify",
+    "spotifySubtitle": "I really like listening to music 😅",
+    "listening": "Not listening"
+  }
+}

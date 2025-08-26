@@ -3,9 +3,9 @@ import perkakas from '@/assets/images/projects/perkakas.png';
 import quranQuiz from '@/assets/images/projects/quran-quiz.png';
 import kasaTalk from '@/assets/images/projects/kasa-talk.png';
 import pcbumigora from '@/assets/images/projects/pcbumigora.png';
-import cataai from '@/assets/images/projects/cata-ai.png'
+import cataai from '@/assets/images/projects/cata-ai.png';
 
-import { SiNextdotjs, SiReact, SiTailwindcss, SiFirebase, SiPlanetscale, SiExpress, SiSupabase,  SiPrisma, SiFastapi, SiTensorflow } from 'react-icons/si';
+import { SiNextdotjs, SiReact, SiTailwindcss, SiFirebase, SiPlanetscale, SiExpress, SiSupabase, SiPrisma, SiFastapi, SiTensorflow } from 'react-icons/si';
 
 import { ProjectsProps } from '../types';
 
@@ -14,7 +14,7 @@ export const projects: ProjectsProps[] = [
     id: 1,
     src: waHelper,
     title: 'Wa Helper',
-    description: 'You can easily chat someone without saving number',
+    description: 'items.waHelper.description',
     techs: [
       { name: 'React', icon: <SiReact /> },
       { name: 'Tailwind', icon: <SiTailwindcss /> },
@@ -26,7 +26,7 @@ export const projects: ProjectsProps[] = [
     id: 2,
     src: perkakas,
     title: 'Tools',
-    description: 'Here are some your favorite online tools',
+    description: 'items.perkakas.description',
     techs: [
       { name: 'Next Js', icon: <SiNextdotjs /> },
       { name: 'Tailwind', icon: <SiTailwindcss /> },
@@ -38,7 +38,7 @@ export const projects: ProjectsProps[] = [
     id: 3,
     src: quranQuiz,
     title: 'Quran Quiz',
-    description: 'A feature to generating quizzes about the Quran',
+    description: 'items.quranQuiz.description',
     techs: [
       { name: 'Next Js', icon: <SiNextdotjs /> },
       { name: 'Tailwind', icon: <SiTailwindcss /> },
@@ -50,7 +50,7 @@ export const projects: ProjectsProps[] = [
     id: 4,
     src: kasaTalk,
     title: 'Kasa Talk',
-    description: 'A platform that provides a Sasak language dictionary',
+    description: 'items.kasaTalk.description',
     techs: [
       { name: 'Next Js', icon: <SiNextdotjs /> },
       { name: 'Tailwind', icon: <SiTailwindcss /> },
@@ -64,12 +64,12 @@ export const projects: ProjectsProps[] = [
     id: 5,
     src: pcbumigora,
     title: 'PC Bumigora',
-    description: 'A platform that provides information about PC Bumigora',
+    description: 'items.pcbumigora.description',
     techs: [
       { name: 'Next Js', icon: <SiNextdotjs /> },
       { name: 'Tailwind', icon: <SiTailwindcss /> },
       { name: 'Prisma', icon: <SiPrisma /> },
-      { name:'Supabase', icon: <SiSupabase /> }
+      { name: 'Supabase', icon: <SiSupabase /> },
     ],
     visit: 'https://www.pcbumigora.online/',
   },
@@ -77,12 +77,12 @@ export const projects: ProjectsProps[] = [
     id: 6,
     src: cataai,
     title: 'Cata AI',
-    description: 'A platform that provides cataract classification using CNN',
+    description: 'items.cataai.description',
     techs: [
       { name: 'React Js', icon: <SiReact /> },
       { name: 'Tailwind', icon: <SiTailwindcss /> },
       { name: 'Fast API', icon: <SiFastapi /> },
-      { name:'Tensorflow', icon: <SiTensorflow /> }
+      { name: 'Tensorflow', icon: <SiTensorflow /> },
     ],
     visit: 'https://cata-ai.vercel.app/',
   },

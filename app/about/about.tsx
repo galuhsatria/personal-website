@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 'use client';
 import useLoaded from '@/hooks/useLoaded';
+import { useTranslations } from 'next-intl';
 import { SiGithub, SiInstagram, SiLinkedin, SiNextdotjs, SiReact, SiSpotify, SiTailwindcss, SiX, SiLaravel, SiInertia } from 'react-icons/si';
 import useSWR from 'swr';
 
@@ -22,19 +23,21 @@ export default function About() {
 
   const isLoaded = useLoaded();
 
+  const t = useTranslations('about');
+
   return (
     <main>
-      <section className={`mt-28 mb-20 max-w-4xl mx-auto max-md:px-4 ${isLoaded && 'fade-in-start'}`}>
+      <section className={`mt-28 mb-20 max-w-4xl mx-auto max-lg:px-4 ${isLoaded && 'fade-in-start'}`}>
         <h1 data-fade="0">
-          <span className="font-bold text-4xl text-black dark:text-white">About Me</span>
+          <span className="font-bold text-4xl text-black dark:text-white">{t('title')}</span>
         </h1>
         <div className="flex flex-col gap-5 mt-6">
           <div data-fade="1">
-            <p className="dark:text-white text-black">Hi, I&apos;m Galuh Satria, a {age}-year-old web development enthusiast. I started learning web development in December 2021 through YouTube, focusing primarily on frontend development.</p>
-            <p  className="dark:text-white text-black"> Currently, I am studying computer science at a university in Lombok, Nusa Tenggara Barat, and I am actively involved in several campus communities, including the Google Developer Student Club. </p>
-            <p  className="dark:text-white text-black"> I enjoy learning new things and appreciate feedback to help me improve.</p>
+            <p className="dark:text-white text-black">{t('description.paragraph1')}</p>
+            <p className="dark:text-white text-black">{t('description.paragraph2')}</p>
+            <p className="dark:text-white text-black">{t('description.paragraph3')}</p>
             <div>
-              <h2 className="text-xl my-6 font-bold text-black dark:text-white">Current Favorite Tech Stack</h2>
+              <h2 className="text-xl my-6 font-bold text-black dark:text-white">{t('favoriteTechStack')}</h2>
               <div className="flex gap-4">
                 <SiNextdotjs className="text-4xl text-black dark:text-white" />
                 <SiReact className="text-4xl text-black dark:text-white" />
@@ -45,7 +48,7 @@ export default function About() {
             </div>
           </div>
           <div data-fade="2">
-            <h2 className="text-xl my-6 font-bold text-black dark:text-white">Contact</h2>
+            <h2 className="text-xl my-6 font-bold text-black dark:text-white">{t('contact')}</h2>
             <ul className="flex flex-wrap gap-6">
               <li className="hover:text-blue-500 transition-colors text-black dark:text-white">
                 <a href="https://github.com/galuhsatria" target="_balank" className=" text-black dark:text-white flex gap-2 items-center">
@@ -84,8 +87,8 @@ export default function About() {
         </div>
 
         <div className="pt-10" data-fade="3">
-          <p className="font-bold text-xl mb-1 text-black dark:text-white">Currently playing on my Spotify</p>
-          <p className="text-sm text-gray-400">I really like listening to music 😅</p>
+          <p className="font-bold text-xl mb-1 text-black dark:text-white">{t('spotify')}</p>
+          <p className="text-sm text-gray-400">{t('spotifySubtitle')}</p>
 
           <div className="mt-5">
             <a
@@ -97,7 +100,7 @@ export default function About() {
               <div className="w-16">{data?.isPlaying ? <img className="w-16 shadow-sm rounded-md" src={data?.albumImageUrl} alt={data?.album} /> : <SiSpotify size={64} color={'#1ED760'} />}</div>
 
               <div className="flex-1">
-                <p className="component text-white font-bold">{data?.isPlaying ? data.title : 'Not Listening'}</p>
+                <p className="component text-white font-bold">{data?.isPlaying ? data.title : t('listening')}</p>
                 <p className="font-dark text-white text-xs">{data?.isPlaying ? data.artist : 'Spotify'}</p>
               </div>
               <div className="absolute bottom-1.5 right-1.5">

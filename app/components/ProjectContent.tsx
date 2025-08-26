@@ -6,7 +6,7 @@ import ProjectItem from "./ui/ProjectItem";
 export function FeaturedProject({ projects }: any) {
   const isLoaded = useLoaded();
   const latestProjects = projects.slice(-3).reverse();
-
+  
   return (
     <section className={`${isLoaded && "fade-in-start"}`}>
       <ul className="mt-6 grid gap-4 sm:grid-cols-2 xl:grid-cols-3 list-none">

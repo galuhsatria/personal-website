@@ -8,6 +8,7 @@ import NextTopLoader from 'nextjs-toploader';
 import 'react-photo-view/dist/react-photo-view.css';
 import { GeistSans } from 'geist/font/sans';
 import { Toaster } from './components/ui/sonner';
+import { NextIntlClientProvider } from 'next-intl';
 
 export const metadata: Metadata = {
   title: 'Galuh Satria',
@@ -40,16 +41,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <head>
         <script defer src="https://cloud.umami.is/script.js" data-website-id="c5deca0e-365b-45e5-99ae-a6a10a10cb4a"></script>
-        <meta name="google-site-verification" content="dzq1psxM3O9eGTVFNSf4brHqOEhj6Z2S1LyLpoBdCU0" />
       </head>
       <body className={GeistSans.className}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <NextTopLoader showSpinner={false} height={2} shadow="0 0 #0000" crawlSpeed={400} />
-          <Navbar />
-          {children}
-          <Footer />
-          <MobileNav />
-          <Toaster position='top-center'/>
+          <NextIntlClientProvider>
+            <NextTopLoader showSpinner={false} height={2} shadow="0 0 #0000" crawlSpeed={400} />
+            <Navbar />
+            {children}
+            <Footer />
+            <MobileNav />
+            <Toaster position="bottom-right" />
+          </NextIntlClientProvider>
         </ThemeProvider>
       </body>
     </html>

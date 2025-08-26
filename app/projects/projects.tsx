@@ -8,7 +8,7 @@ export default function Projects() {
 
   return (
     <main>
-      <section className={`mt-28 mb-20 max-w-4xl max-md:px-4 mx-auto ${isLoaded && 'fade-in-start'}`}>
+      <section className={`mt-28 mb-20 max-w-4xl max-lg:px-4 mx-auto ${isLoaded && 'fade-in-start'}`}>
         <h1 className="text-4xl font-bold " data-fade="1">
           <span className="dark:text-white text-black">Projects</span>
         </h1>
