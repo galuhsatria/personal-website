@@ -78,7 +78,7 @@
   "about": {
     "title": "About Me",
     "description": {
-      "paragraph1": "Hi, I'm Galuh Satria, a {{age}}-year-old web development enthusiast. I started learning web development in December 2021 through YouTube, focusing primarily on frontend development.",
+      "paragraph1": "Hi, I'm Galuh Satria, a {age}-year-old web development enthusiast. I started learning web development in December 2021 through YouTube, focusing primarily on frontend development.",
       "paragraph2": "Currently, I am studying computer science at a university in Lombok, Nusa Tenggara Barat, and I am actively involved in several campus communities, including the Google Developer Student Club.",
       "paragraph3": "I enjoy learning new things and appreciate feedback to help me improve."
     },
