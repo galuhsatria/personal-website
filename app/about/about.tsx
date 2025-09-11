@@ -33,7 +33,7 @@ export default function About() {
         </h1>
         <div className="flex flex-col gap-5 mt-6">
           <div data-fade="1">
-            <p className="dark:text-white text-black">{t('description.paragraph1')}</p>
+            <p className="dark:text-white text-black">{t('description.paragraph1', { age })}</p>
             <p className="dark:text-white text-black">{t('description.paragraph2')}</p>
             <p className="dark:text-white text-black">{t('description.paragraph3')}</p>
             <div>
