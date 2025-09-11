@@ -62,15 +62,15 @@ export default function Navbar() {
   };
 
   return (
-    <header className={`w-full mx-auto md:mt-2 max-sm:border-b border-border px-4 py-3 fixed top-0 z-50 transition-transform duration-30 max-sm:bg-background   ${visible ? 'max-sm:-translate-y-24' : ''}`}>
-      <nav className="flex items-center max-w-xl sm:border border-border mx-auto sm:py-2 rounded-full px-4 sm:backdrop-blur-md sm:bg-white/80 sm:dark:bg-black/80 justify-between">
+    <header className={`w-full mx-auto border-b border-border px-4 py-2 fixed top-0 z-50 transition-transform duration-30 bg-background ${visible ? 'max-sm:-translate-y-24' : ''}`}>
+      <nav className="flex items-center max-w-4xl mx-auto rounded-full justify-between">
         <div>
           <ul className="hidden sm:flex gap-6">
             {links.map(({ href, label }) => (
               <li key={`${href}${label}`}>
                 <Link
                   href={href}
-                  className={`dark:hover:text-white hover:text-black rounded-md hover:transition-colors ${pathname === href || (pathname.startsWith('/blog/') && href === '/blog') ? 'dark:text-white text-black' : 'text-zinc-400'}`}
+                  className={`dark:hover:text-white text-base hover:text-black rounded-md hover:transition-colors ${pathname === href || (pathname.startsWith('/blog/') && href === '/blog') ? 'dark:text-white text-black' : 'text-zinc-400'}`}
                 >
                   {label}
                 </Link>

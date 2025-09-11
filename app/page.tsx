@@ -26,7 +26,7 @@ export default function Home() {
             <p className="text-lg mt-2 font-medium text-muted-foreground transition-colors">Frontend Developer</p>
           </div>
         </div>
-        <div className="mt-8" data-fade="2">
+        <div className="mt-6" data-fade="2">
           <h1 className="text-2xl font-bold mb-2 dark:text-white text-black">{t('title')}</h1>
           <p className="dark:text-white text-black">{t('subtitle')}</p>
           <div className="flex gap-5 mt-4">
@@ -49,7 +49,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="mt-12" data-fade="3">
+        <div className="mt-8" data-fade="3">
           <h1 className="text-2xl font-bold dark:text-white text-black">{t('featureProjects')}</h1>
           <FeaturedProject projects={projects} />
           <Link href="/projects" className="flex items-center group mt-4 text-muted-foreground hover:text-primary transition-colors font-semibold w-max">
