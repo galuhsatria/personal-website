@@ -72,6 +72,10 @@
       "waHelper": {
         "name": "WA Helper",
         "description": "Memungkinkan Anda mengirim pesan WhatsApp tanpa menyimpan nomor"
+      },
+      "monanya": {
+        "name": "Monanya",
+        "description": "Aplikasi untuk mengumpulkan pertanyaan anonim"
       }
     }
   },

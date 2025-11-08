@@ -72,6 +72,10 @@
       "waHelper": {
         "name": "WA Helper",
         "description": "You can easily chat someone without saving number"
+      },
+      "monanya": {
+        "name": "Monanya",
+        "description": "Application for collecting anonymous questions"
       }
     }
   },
