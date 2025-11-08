@@ -24,7 +24,7 @@ export async function GET(req: Request) {
         }}
       >
         <div style={{ display: 'flex', gap: '25px', alignItems: 'center' }}>
-          <img src="https://galuhsatria.vercel.app/avatar.jpeg" alt="avatar image" style={{ height: '80px', width: '80px', borderRadius: '100%', objectFit: 'cover' }} width={20} height={30} />
+          <img src="https://galuhsatria.vercel.app/avatar.png" alt="avatar image" style={{ height: '80px', width: '80px', borderRadius: '100%', objectFit: 'cover' }} width={20} height={30} />
           <p style={{ color: 'white', fontWeight: 'bold', fontSize: '30px', display: 'flex', flexDirection: 'column' }}>
             Galuh Satria <span style={{ fontSize: '20px', marginTop: '4px', color: '#9CA3AF', fontWeight: 'normal' }}>Frontend Developer</span>
           </p>
