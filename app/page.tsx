@@ -39,7 +39,7 @@ export default function Home() {
               Galuh Satria
             </Link>
             <Link
-              href={'https://drive.google.com/file/d/1cz0UJgjHnsYf_RA1bV465YFbXbvaqHvF/view?usp=sharing'}
+              href={'https://drive.google.com/file/d/1pn2sWJ-EJF9P_CT6F7XcGxd1nqzUTyJI/view?usp=sharing'}
               target="_blank"
               className="flex flex-row items-center gap-[6px] text-muted-foreground hover:text-primary transition-colors group w-max"
             >
