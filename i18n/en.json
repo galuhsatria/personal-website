@@ -87,9 +87,9 @@
   "about": {
     "title": "About Me",
     "description": {
-      "paragraph1": "Hi, I'm Galuh Satria, a {age}-year-old web development enthusiast. I started learning web development in December 2021 through YouTube, focusing primarily on frontend development.",
-      "paragraph2": "Currently, I am studying computer science at a university in Lombok, Nusa Tenggara Barat, and I am actively involved in several campus communities, including the Google Developer Student Club.",
-      "paragraph3": "I enjoy learning new things and appreciate feedback to help me improve."
+      "paragraph1": "Hi, I'm Galuh Satria. I’m interested in web development and enjoy building websites and web applications that are useful and comfortable to use.",
+      "paragraph2": "I started learning web development independently in December 2021 through various online resources. Over time, I have continued to improve my skills by working on different projects using React, Next.js, Laravel, and other web technologies.",
+      "paragraph3": "While studying Computer Science, I also explored Intelligent Systems and AI, including how artificial intelligence models are built, trained, and applied to solve real-world problems. I’m always excited to learn new things and keep growing as a developer."
     },
     "favoriteTechStack": "Current Favorite Tech Stack",
     "contact": "Contact",
