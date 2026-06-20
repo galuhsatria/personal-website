@@ -14,6 +14,11 @@
       "title": "Pengalaman",
       "subtitle": "Berikut adalah beberapa pengalaman kerja saya",
       "items": {
+        "bbpntb": {
+          "title": "Magang Pranata Komputer di Balai Bahasa Provinsi NTB",
+          "subtitle": "Mengembangkan sistem peminjaman BMN digital untuk mempercepat proses pengajuan, persetujuan, pemantauan, dan pengarsipan secara transparan serta akuntabel.",
+          "date": "April 2025"
+        },
         "proxocoris": {
           "title": "Kompetisi Internasional PROXOCORIS 2025",
           "subtitle": "Pemenang kompetisi pengembangan web dalam kategori fungsionalitas terbaik",

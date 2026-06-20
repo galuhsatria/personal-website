@@ -1,45 +1,69 @@
-'use client';
+"use client";
 
-import Image from 'next/image';
-import { FeaturedProject } from './components/ProjectContent';
-import Link from 'next/link';
-import { HiOutlineArrowNarrowRight } from 'react-icons/hi';
-import { BsGithub, BsLinkedin, BsTwitter } from 'react-icons/bs';
-import useLoaded from './hooks/useLoaded';
-import Experience from './components/ui/Experience';
-import { GrDocumentUser } from 'react-icons/gr';
-import EmailForm from './components/EmailForm';
-import { useTranslations } from 'next-intl';
-import { projects } from './data/projects';
+import Image from "next/image";
+import { FeaturedProject } from "./components/ProjectContent";
+import Link from "next/link";
+import { HiOutlineArrowNarrowRight } from "react-icons/hi";
+import { BsGithub, BsLinkedin, BsTwitter } from "react-icons/bs";
+import useLoaded from "./hooks/useLoaded";
+import Experience from "./components/ui/Experience";
+import { GrDocumentUser } from "react-icons/gr";
+import EmailForm from "./components/EmailForm";
+import { useTranslations } from "next-intl";
+import { projects } from "./data/projects";
 
 export default function Home() {
   const isLoaded = useLoaded();
-  const t = useTranslations('home');
+  const t = useTranslations("home");
 
   return (
     <main className="max-w-4xl mx-auto max-lg:px-4 mt-28 mb-20">
-      <section className={`${isLoaded && 'fade-in-start'}`}>
+      <section className={`${isLoaded && "fade-in-start"}`}>
         <div className=" flex sm:flex-row flex-col sm:items-center gap-6 ">
-          <Image src={'/avatar.png'} alt="profil-picture" width={150} height={100} className="rounded-full object-cover h-32 w-32" data-fade="0" unoptimized />
+          <Image
+            src={"/avatar.png"}
+            alt="profil-picture"
+            width={150}
+            height={100}
+            className="rounded-full object-cover h-32 w-32"
+            data-fade="0"
+            unoptimized
+          />
           <div data-fade="1">
-            <h1 className="text-4xl font-bold dark:text-white text-black">Galuh Satria</h1>
-            <p className="text-lg mt-2 font-medium text-muted-foreground transition-colors">Frontend Developer</p>
+            <h1 className="text-4xl font-bold dark:text-white text-black">
+              Galuh Satria
+            </h1>
+            <p className="text-lg mt-2 font-medium text-muted-foreground transition-colors">
+              Frontend Developer
+            </p>
           </div>
         </div>
         <div className="mt-6" data-fade="2">
-          <h1 className="text-2xl font-bold mb-2 dark:text-white text-black">{t('title')}</h1>
-          <p className="dark:text-white text-black">{t('subtitle')}</p>
+          <h1 className="text-2xl font-bold mb-2 dark:text-white text-black">
+            {t("title")}
+          </h1>
+          <p className="dark:text-white text-black">{t("subtitle")}</p>
           <div className="flex gap-5 mt-4">
-            <Link href={'https://github.com/galuhsatria'} className="flex flex-row items-center gap-[6px] text-muted-foreground hover:text-primary transition-colors  group w-max" target="_blank">
+            <Link
+              href={"https://github.com/galuhsatria"}
+              className="flex flex-row items-center gap-[6px] text-muted-foreground hover:text-primary transition-colors  group w-max"
+              target="_blank"
+            >
               <BsGithub className="group-hover:text-black dark:group-hover:text-white mt-1" />
               galuhsatria
             </Link>
-            <Link href={'https://www.linkedin.com/in/galuhsatria/'} className="flex flex-row items-center gap-[6px] text-muted-foreground hover:text-primary transition-colors group w-max" target="_blank">
+            <Link
+              href={"https://www.linkedin.com/in/galuhsatria/"}
+              className="flex flex-row items-center gap-[6px] text-muted-foreground hover:text-primary transition-colors group w-max"
+              target="_blank"
+            >
               <BsLinkedin className="group-hover:text-blue-500" />
               Galuh Satria
             </Link>
             <Link
-              href={'https://drive.google.com/file/d/1pn2sWJ-EJF9P_CT6F7XcGxd1nqzUTyJI/view?usp=sharing'}
+              href={
+                "https://drive.google.com/file/d/1pn2sWJ-EJF9P_CT6F7XcGxd1nqzUTyJI/view?usp=sharing"
+              }
               target="_blank"
               className="flex flex-row items-center gap-[6px] text-muted-foreground hover:text-primary transition-colors group w-max"
             >
@@ -50,23 +74,35 @@ export default function Home() {
         </div>
 
         <div className="mt-8" data-fade="3">
-          <h1 className="text-2xl font-bold dark:text-white text-black">{t('featureProjects')}</h1>
+          <h1 className="text-2xl font-bold dark:text-white text-black">
+            {t("featureProjects")}
+          </h1>
           <FeaturedProject projects={projects} />
-          <Link href="/projects" className="flex items-center group mt-4 text-muted-foreground hover:text-primary transition-colors font-semibold w-max">
-            {t('viewAllProjects')} <HiOutlineArrowNarrowRight className="group-hover:ml-2 transition-all" />
+          <Link
+            href="/projects"
+            className="flex items-center group mt-4 text-muted-foreground hover:text-primary transition-colors font-semibold w-max"
+          >
+            {t("viewAllProjects")}{" "}
+            <HiOutlineArrowNarrowRight className="group-hover:ml-2 transition-all" />
           </Link>
         </div>
 
         <div data-fade="4" className="mt-12">
-          <h1 className="text-2xl font-bold dark:text-white text-black">{t('experience.title')}</h1>
+          <h1 className="text-2xl font-bold dark:text-white text-black">
+            {t("experience.title")}
+          </h1>
           <Experience />
         </div>
 
         <div className="mt-12 bg-secondary p-4 rounded-lg" data-fade="4">
           <div className="flex max-md:flex-col md:flex-row items-center gap-8">
             <div className="w-full">
-              <h1 className="text-2xl font-bold dark:text-white text-black">{t('contact.title')}</h1>
-              <p className="text-sm text-muted-foreground mt-4">{t('contact.subtitle')}</p>
+              <h1 className="text-2xl font-bold dark:text-white text-black">
+                {t("contact.title")}
+              </h1>
+              <p className="text-sm text-muted-foreground mt-4">
+                {t("contact.subtitle")}
+              </p>
             </div>
             <div className="w-full">
               <EmailForm />

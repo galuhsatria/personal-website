@@ -8,6 +8,12 @@ export default function Experience() {
 
   const experiences = [
     {
+      date: t('experience.items.bbpntb.date'),
+      title: t('experience.items.bbpntb.title'),
+      description: t('experience.items.bbpntb.subtitle'),
+      icon: <FaBriefcase />,
+    },
+    {
       date: t('experience.items.proxocoris.date'),
       title: t('experience.items.proxocoris.title'),
       description: t('experience.items.proxocoris.subtitle'),
