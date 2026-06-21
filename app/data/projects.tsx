@@ -5,6 +5,7 @@ import kasaTalk from "@/assets/images/projects/kasa-talk.png";
 import pcbumigora from "@/assets/images/projects/pcbumigora.png";
 import cataai from "@/assets/images/projects/cata-ai.png";
 import monanya from "@/assets/images/projects/monanya.png";
+import simpelbmn from "@/assets/images/projects/simpelbmn.png";
 
 import {
   SiNextdotjs,
@@ -19,6 +20,8 @@ import {
   SiTensorflow,
   SiReacthookform,
   SiPostgresql,
+  SiLaravel,
+  SiMysql
 } from "react-icons/si";
 
 import { ProjectsProps } from "../types";
@@ -172,5 +175,17 @@ export const projects: ProjectsProps[] = [
       { name: "Tensorflow", icon: <SiTensorflow /> },
     ],
     visit: "https://cata-ai.vercel.app/",
+  },
+  {
+    id: 8,
+    src: simpelbmn,
+    title: "SIMPEL-BMN",
+    description: "items.simpelbmn.description",
+    techs: [
+      { name: "Laravel", icon: <SiLaravel /> },
+      { name: "Tailwind", icon: <SiTailwindcss /> },
+      { name: "MySQL", icon: <SiMysql /> },
+    ],
+    visit: "https://sidaya.kemendikdasmen.go.id/simpelbmn",
   },
 ];

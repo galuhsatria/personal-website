@@ -54,6 +54,10 @@
     "title": "Projects",
     "visit": "Visit Site",
     "items": {
+      "simpelbmn": {
+        "name": "SIMPEL-BMN",
+        "description": "Platform for submitting BMN loan applications online"
+      },
       "cataai": {
         "name": "Cata AI",
         "description": "A platform that provides cataract classification using Deep Learning"

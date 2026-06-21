@@ -54,6 +54,10 @@
     "title": "Proyek",
     "visit": "Kunjungi",
     "items": {
+      "simpelbmn": {
+        "name": "SIMPEL-BMN",
+        "description": "Platform untuk melakukan pengajuan peminjaman BMN secara daring"
+      },
       "cataai": {
         "name": "Cata AI",
         "description": "Platform yang menyediakan klasifikasi katarak menggunakan Deep Learning"
