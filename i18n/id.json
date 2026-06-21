@@ -91,9 +91,9 @@
   "about": {
     "title": "Tentang Saya",
     "description": {
-      "paragraph1": "Halo, saya Galuh Satria, seorang penggemar pengembangan web berusia {age} tahun. Saya mulai belajar pengembangan web pada Desember 2021 melalui YouTube dengan fokus utama pada frontend development.",
-      "paragraph2": "Saat ini, saya sedang menempuh pendidikan ilmu komputer di salah satu universitas di Lombok, Nusa Tenggara Barat, dan aktif terlibat dalam beberapa komunitas kampus, termasuk Google Developer Student Club.",
-      "paragraph3": "Saya senang mempelajari hal-hal baru dan menghargai masukan untuk membantu saya berkembang."
+        "paragraph1": "Halo, saya Galuh Satria. Saya tertarik pada dunia web development dan senang membangun website maupun aplikasi web yang bermanfaat dan nyaman digunakan.",
+        "paragraph2": "Saya mulai belajar web development secara otodidak sejak Desember 2021 melalui berbagai sumber online. Seiring waktu, saya terus mengembangkan kemampuan dengan mengerjakan berbagai proyek menggunakan React, Next.js, Laravel, dan teknologi web lainnya.",
+        "paragraph3": "Saat menempuh studi Ilmu Komputer, saya juga mendalami bidang Sistem Cerdas dan AI, termasuk bagaimana model kecerdasan buatan dibangun, dilatih, dan diterapkan untuk menyelesaikan permasalahan di dunia nyata. Saya selalu antusias mempelajari hal baru dan terus berkembang sebagai developer."
     },
     "favoriteTechStack": "Teknologi Favorit Saat Ini",
     "contact": "Kontak",
