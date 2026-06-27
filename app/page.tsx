@@ -34,7 +34,7 @@ export default function Home() {
               Galuh Satria
             </h1>
             <p className="text-lg mt-2 font-medium text-muted-foreground transition-colors">
-              Frontend Developer
+              Fullstack Developer
             </p>
           </div>
         </div>
