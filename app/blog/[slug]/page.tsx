@@ -35,7 +35,7 @@ const Page = async (props: { params: Promise<{ slug: string }> }) => {
 
   if (!post) {
     return (
-      <main className="max-w-4xl min-h-screen mx-auto py-4 mt-7 max-md:px-4">
+      <main className="max-w-4xl min-h-screen mx-auto py-4 mt-7">
         <div className="mt-14">
           <h1 className="text-4xl font-bold my-7">Blog Tidak Ditemukan</h1>
           <p className="mt-2 text-muted-foreground">Maaf konten blog yang ada cari tidak ada</p>
@@ -45,7 +45,7 @@ const Page = async (props: { params: Promise<{ slug: string }> }) => {
   }
 
   return (
-    <main className="max-w-4xl mx-auto py-4 max-md:px-4">
+    <main className="max-w-4xl mx-auto py-4">
       <div className="">
         <h1 className="text-4xl max-md:text-2xl font-bold my-7">{post.title}</h1>
         <p className="mt-2 text-muted-foreground">Written on {new Date(post.createdAt).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: '2-digit' })}</p>
