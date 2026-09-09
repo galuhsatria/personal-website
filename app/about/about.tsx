@@ -103,42 +103,47 @@ const techStack = [
 
 const AUDIO_SRC = "/music/Building My Way.mp3";
 
+type WaveSegment = {
+  text: string;
+  className: string;
+};
+
 export default function About() {
   const t = useTranslations('about');
 
   const [isPlaying, setIsPlaying] = useState(false);
-    const [isPressed, setIsPressed] = useState(false);
-    const [waveKey, setWaveKey] = useState(0);
-    const pressTimeout = useRef(null);
-    const audioRef = useRef(null);
+  const [isPressed, setIsPressed] = useState(false);
+  const [waveKey, setWaveKey] = useState(0);
+  const pressTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const audioRef = useRef<HTMLAudioElement>(null);
 
-    const title = "Building My Way";
-    const name = "Suno AI";
+  const title = "Building My Way";
+  const name = "Suno AI";
 
-    useEffect(() => {
-      const audio = audioRef.current;
-      if (!audio) return;
+  useEffect(() => {
+    const audio = audioRef.current;
+    if (!audio) return;
 
-      const handleEnded = () => setIsPlaying(false);
-      audio.addEventListener("ended", handleEnded);
-      return () => audio.removeEventListener("ended", handleEnded);
-    }, []);
+    const handleEnded = () => setIsPlaying(false);
+    audio.addEventListener("ended", handleEnded);
+    return () => audio.removeEventListener("ended", handleEnded);
+  }, []);
 
-    const handleClick = () => {
-      const next = !isPlaying;
-      setIsPlaying(next);
+  const handleClick = () => {
+    const next = !isPlaying;
+    setIsPlaying(next);
 
-      setIsPressed(true);
-      clearTimeout(pressTimeout.current);
-      pressTimeout.current = setTimeout(() => setIsPressed(false), 180);
+    setIsPressed(true);
+    if (pressTimeout.current) clearTimeout(pressTimeout.current);
+    pressTimeout.current = setTimeout(() => setIsPressed(false), 180);
 
-      if (next) {
-        setWaveKey((k) => k + 1);
-        audioRef.current?.play();
-      } else {
-        audioRef.current?.pause();
-      }
-    };
+    if (next) {
+      setWaveKey((k) => k + 1);
+      audioRef.current?.play();
+    } else {
+      audioRef.current?.pause();
+    }
+  };
 
   return (
     <section className="flex gap-2 items-start my-4">
@@ -155,39 +160,39 @@ export default function About() {
           galuhsatria <VscVerifiedFilled className="text-lg text-blue-500" />
         </p>
         <div className="flex items-center mb-1">
-              <audio ref={audioRef} src={AUDIO_SRC} preload="auto" />
+          <audio ref={audioRef} src={AUDIO_SRC} preload="auto" />
 
-              <div className="flex gap-3 items-center mb-1">
-                <button
-                  onClick={handleClick}
-                  aria-label={isPlaying ? "Pause" : "Play"}
-                  className="bg-neutral-800 hover:bg-neutral-700 w-7 h-7 rounded-full transition-colors duration-200 flex items-center justify-center shrink-0"
-                >
-                  <span
-                    className="inline-flex transition-transform duration-150 ease-out"
-                    style={{ transform: isPressed ? "scale(0.65)" : "scale(1)" }}
-                  >
-                    {isPlaying ? (
-                      <Pause className="w-3 h-3 fill-current text-white" />
-                    ) : (
-                      <Play className="w-3 h-3 fill-current text-white ml-0.5" />
-                    )}
-                  </span>
-                </button>
+          <div className="flex gap-3 items-center mb-1">
+            <button
+              onClick={handleClick}
+              aria-label={isPlaying ? "Pause" : "Play"}
+              className="bg-secondary w-7 h-7 rounded-full transition-colors duration-200 flex items-center justify-center shrink-0"
+            >
+              <span
+                className="inline-flex transition-transform duration-150 ease-out"
+                style={{ transform: isPressed ? "scale(0.65)" : "scale(1)" }}
+              >
+                {isPlaying ? (
+                  <Pause className="w-3 h-3 fill-current" />
+                ) : (
+                  <Play className="w-3 h-3 fill-current ml-0.5" />
+                )}
+              </span>
+            </button>
 
-                <p className="font-semibold text-sm flex items-center">
-                  <WaveText
-                    key={waveKey}
-                    active={isPlaying}
-                    segments={[
-                      { text: title, className: "text-white" },
-                      { text: " • ", className: "text-neutral-500" },
-                      { text: name, className: "text-neutral-400 font-light" },
-                    ]}
-                  />
-                </p>
-              </div>
-            </div>
+            <p className="font-semibold text-sm flex items-center">
+              <WaveText
+                key={waveKey}
+                active={isPlaying}
+                segments={[
+                  { text: title },
+                  { text: " • ", className: "text-neutral-500" },
+                  { text: name, className: "text-neutral-400 font-light" },
+                ]}
+              />
+            </p>
+          </div>
+        </div>
         <div>
           <div className="flex flex-col gap-2">
             <p className="max-md:text-sm">{t('description.paragraph1')}</p>
@@ -275,8 +280,7 @@ export default function About() {
   );
 }
 
-
-function WaveText({ segments, active }) {
+function WaveText({ segments, active }: { segments: WaveSegment[]; active: boolean }) {
   let globalIndex = 0;
 
   return (
