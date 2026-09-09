@@ -2,6 +2,7 @@ export interface ProjectsProps {
   id: number;
   src: any;
   title: string;
+  year: string;
   description: string;
   techs: any[];
   code?: string;

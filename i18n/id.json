@@ -1,9 +1,13 @@
 {
   "navigation": {
-    "home": "Beranda",
+    "experience": "Pengalaman",
     "projects": "Proyek",
     "blog": "Blog",
-    "about": "Tentang"
+    "about": "Tentang",
+    "status":"Terbuka untuk bekerja",
+    "experiences":"4 tahun pengalaman",
+    "featuredProjects": "proyek unggulan",
+    "letsTalk":"Say hi"
   },
   "home": {
     "title": "Halo, Saya Galuh",
@@ -17,7 +21,7 @@
         "bbpntb": {
           "title": "Magang Pranata Komputer di Balai Bahasa Provinsi NTB",
           "subtitle": "Mengembangkan sistem peminjaman BMN digital untuk mempercepat proses pengajuan, persetujuan, pemantauan, dan pengarsipan secara transparan serta akuntabel.",
-          "date": "April 2025"
+          "date": "Desember 2025 - Juni 2026"
         },
         "proxocoris": {
           "title": "Kompetisi Internasional PROXOCORIS 2025",
@@ -40,14 +44,6 @@
           "date": "September 2023 - September 2024"
         }
       }
-    },
-    "contact": {
-      "title": "Hubungi Saya",
-      "subtitle": "Saya selalu tertarik untuk menjelajahi peluang baru, berkolaborasi, atau bertukar ide dengan orang-orang yang sejalan. Jangan ragu untuk mengirim email jika Anda ingin melihat portofolio saya atau mendiskusikan proyek potensial.",
-      "name": "Nama",
-      "email": "Email",
-      "message": "Pesan",
-      "sendMessage": "Kirim Pesan"
     }
   },
   "projects": {
@@ -91,14 +87,22 @@
   "about": {
     "title": "Tentang Saya",
     "description": {
-        "paragraph1": "Halo, saya Galuh Satria. Saya tertarik pada dunia web development dan senang membangun website maupun aplikasi web yang bermanfaat dan nyaman digunakan.",
-        "paragraph2": "Saya mulai belajar web development secara otodidak sejak Desember 2021 melalui berbagai sumber online. Seiring waktu, saya terus mengembangkan kemampuan dengan mengerjakan berbagai proyek menggunakan React, Next.js, Laravel, dan teknologi web lainnya.",
-        "paragraph3": "Saat menempuh studi Ilmu Komputer, saya juga mendalami bidang Sistem Cerdas dan AI, termasuk bagaimana model kecerdasan buatan dibangun, dilatih, dan diterapkan untuk menyelesaikan permasalahan di dunia nyata. Saya selalu antusias mempelajari hal baru dan terus berkembang sebagai developer."
+      "paragraph1": "Hai, saya Galuh Satria.",
+      "paragraph2": "Seorang Fullstack Web Developer dengan pengalaman dari magang di perusahaan, pelatihan bootcamp intensif, dan berbagai project mandiri.",
+      "paragraph3": "Terbiasa membangun dan mengembangkan aplikasi web menggunakan Next.js, Laravel, dan PostgreSQL, mulai dari tahap perencanaan hingga deployment. Nyaman bekerja dalam tim maupun mengerjakan project secara mandiri."
     },
     "favoriteTechStack": "Teknologi Favorit Saat Ini",
     "contact": "Kontak",
     "spotify": "Sedang Diputar di Spotify Saya",
     "spotifySubtitle": "Saya sangat suka mendengarkan musik 😅",
-    "listening": "Tidak sedang mendengarkan"
+    "listening": "Tidak sedang mendengarkan",
+    "mail": {
+      "title": "Hubungi Saya",
+      "subtitle": "Saya selalu tertarik untuk menjelajahi peluang baru, berkolaborasi, atau bertukar ide dengan orang-orang yang sejalan. Jangan ragu untuk mengirim email jika Anda ingin melihat portofolio saya atau mendiskusikan proyek potensial.",
+      "name": "Nama",
+      "email": "Email",
+      "message": "Pesan",
+      "sendMessage": "Kirim Pesan"
+    }
   }
 }

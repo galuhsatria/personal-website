@@ -1,5 +1,6 @@
+import { Projects } from '@/components/ProjectContent';
+import { projects } from '@/data/projects';
 import type { Metadata } from 'next';
-import Projects from './projects';
 
 export const metadata: Metadata = {
   title: 'Galuh Satria | Projects',
@@ -7,5 +8,5 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <Projects />;
+  return <Projects projects={projects} />;
 }

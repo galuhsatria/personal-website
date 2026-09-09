@@ -4,7 +4,17 @@ const withNextIntl = require('next-intl/plugin')('./app/lib/i18n.ts');
 
 const nextConfig = {
   images: {
-    domains: ['images.pexels.com'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'images.pexels.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'www.google.com',
+        pathname: '/s2/favicons',
+      },
+    ],
   },
 };
 

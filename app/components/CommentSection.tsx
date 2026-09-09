@@ -15,7 +15,7 @@ export default function CommentSection() {
         categoryId="DIC_kwDOKKHOfc4Cp8eh"
         mapping="pathname"
         reactionsEnabled="1"
-        emitMetadata="0"
+        emitMetadata="1"
         inputPosition="top"
         theme={theme}
         lang="en"

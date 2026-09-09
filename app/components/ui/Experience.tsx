@@ -1,7 +1,9 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
+import Image from 'next/image';
 import { FaBriefcase, FaGraduationCap, FaTrophy, FaUsers } from 'react-icons/fa';
+import { VscVerifiedFilled } from 'react-icons/vsc';
 
 export default function Experience() {
   const t = useTranslations('home');
@@ -40,20 +42,47 @@ export default function Experience() {
   ];
 
   return (
-    <div className="container mx-auto px-4 pt-8">
-      <div className="relative border-l border-gray-200">
-        {experiences.map((experience, index) => (
-          <div key={index} className="mb-8 ml-4">
-            <div className="absolute w-8 h-8 rounded-full bg-black text-white dark:text-black dark:bg-white flex items-center justify-center -left-4">
-              {experience.icon}
-            </div>
-            <div className="ml-8">
-              <time className="block text-xs text-muted-foreground">{experience.date}</time>
-              <h3 className="font-semibold dark:text-white text-black">{experience.title}</h3>
-              <p className="text-muted-foreground text-sm mt-1">{experience.description}</p>
-            </div>
-          </div>
-        ))}
+    <div className="mx-auto my-4 flex items-start gap-2">
+      <Image
+        src="/avatar.png"
+        alt="profil-picture"
+        width={20}
+        height={20}
+        className="h-8 w-8 rounded-full object-cover"
+        unoptimized
+      />
+
+      <div className="flex-1">
+        <p className="mb-2 flex items-center gap-1 text-sm font-semibold">
+          galuhsatria
+          <VscVerifiedFilled className="text-lg text-blue-500" />
+        </p>
+
+        <ul className="relative border-l border-gray-200 ml-3 mt-3">
+          {experiences.map((experience, index) => (
+            <li key={index} className="relative mb-8">
+
+              <div className="absolute -left-4 top-0 flex h-8 w-8 items-center justify-center rounded-full bg-foreground text-background">
+                {experience.icon}
+              </div>
+
+              <div className="ml-8">
+                <time className="block text-xs text-muted-foreground">
+                  {experience.date}
+                </time>
+
+                <h3 className="font-semibold text-foreground">
+                  {experience.title}
+                </h3>
+
+                <p className="mt-1 text-sm text-muted-foreground">
+                  {experience.description}
+                </p>
+              </div>
+
+            </li>
+          ))}
+        </ul>
       </div>
     </div>
   );

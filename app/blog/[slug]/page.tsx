@@ -45,8 +45,8 @@ const Page = async (props: { params: Promise<{ slug: string }> }) => {
   }
 
   return (
-    <main className="max-w-4xl mx-auto py-4 max-md:px-4 mt-7">
-      <div className="mt-14">
+    <main className="max-w-4xl mx-auto py-4 max-md:px-4">
+      <div className="">
         <h1 className="text-4xl max-md:text-2xl font-bold my-7">{post.title}</h1>
         <p className="mt-2 text-muted-foreground">Written on {new Date(post.createdAt).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: '2-digit' })}</p>
       </div>
@@ -55,7 +55,7 @@ const Page = async (props: { params: Promise<{ slug: string }> }) => {
         <MDXContent code={post.mdx} />
       </article>
 
-      <div className="mt-8">
+      <div className="mt-8" id='comment'>
         <CommentSection />
       </div>
     </main>

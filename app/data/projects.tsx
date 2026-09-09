@@ -76,6 +76,7 @@ export const projects: ProjectsProps[] = [
     id: 1,
     src: waHelper,
     title: "Wa Helper",
+    year:'2023',
     description: "items.waHelper.description",
     techs: [
       { name: "React", icon: <SiReact /> },
@@ -88,6 +89,7 @@ export const projects: ProjectsProps[] = [
     id: 2,
     src: perkakas,
     title: "Tools",
+    year:'2023',
     description: "items.perkakas.description",
     techs: [
       { name: "Next Js", icon: <SiNextdotjs /> },
@@ -100,6 +102,7 @@ export const projects: ProjectsProps[] = [
     id: 3,
     src: quranQuiz,
     title: "Quran Quiz",
+    year:'2024',
     description: "items.quranQuiz.description",
     techs: [
       { name: "Next Js", icon: <SiNextdotjs /> },
@@ -112,6 +115,7 @@ export const projects: ProjectsProps[] = [
     id: 4,
     src: monanya,
     title: "Monanya",
+    year:'2025',
     description: "items.monanya.description",
     techs: [
       { name: "Next Js", icon: <SiNextdotjs /> },
@@ -140,6 +144,7 @@ export const projects: ProjectsProps[] = [
     id: 5,
     src: kasaTalk,
     title: "Kasa Talk",
+    year:'2023',
     description: "items.kasaTalk.description",
     techs: [
       { name: "Next Js", icon: <SiNextdotjs /> },
@@ -154,6 +159,7 @@ export const projects: ProjectsProps[] = [
     id: 6,
     src: pcbumigora,
     title: "PC Bumigora",
+    year:'2024',
     description: "items.pcbumigora.description",
     techs: [
       { name: "Next Js", icon: <SiNextdotjs /> },
@@ -161,12 +167,13 @@ export const projects: ProjectsProps[] = [
       { name: "Prisma", icon: <SiPrisma /> },
       { name: "Supabase", icon: <SiSupabase /> },
     ],
-    visit: "https://www.pcbumigora.online/",
+    visit: "https://pc.ubg.ac.id/",
   },
   {
     id: 7,
     src: cataai,
     title: "Cata AI",
+    year:'2025',
     description: "items.cataai.description",
     techs: [
       { name: "React Js", icon: <SiReact /> },
@@ -180,6 +187,7 @@ export const projects: ProjectsProps[] = [
     id: 8,
     src: simpelbmn,
     title: "SIMPEL-BMN",
+    year:'2026',
     description: "items.simpelbmn.description",
     techs: [
       { name: "Laravel", icon: <SiLaravel /> },
