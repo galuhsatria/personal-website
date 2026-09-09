@@ -16,8 +16,8 @@ export default async function Blog() {
   const stats = await getAllDiscussionStats();
 
   return (
-    <section className="min-h-screen">
-      <ul className="mt-6">
+    <section className="min-h-screen mt-4">
+      <ul>
         {sortedPosts.map((post, index) => {
           const pathname = `/blog/${post.slug}`;
           const stat = stats[pathname];
@@ -32,7 +32,7 @@ export default async function Blog() {
                 <div className="border border-border rounded-md p-4 mb-4">
                   <Link href={pathname} className="w-full mb-4 flex gap-4 justify-between max-sm:flex-col">
                     <div className="w-full">
-                      <p className="text-lg max-sm:text-base text-foreground hover:!text-blue-500 transition-colors duration-200">{post.title}</p>
+                      <p className="text-lg max-sm:text-base hover:!text-blue-500 transition-colors duration-200">{post.title}</p>
                       <p className="text-sm text-zinc-400 mt-1.5 max-sm:text-xs">{post.summary}</p>
                     </div>
                   </Link>

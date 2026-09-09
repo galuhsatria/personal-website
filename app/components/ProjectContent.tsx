@@ -11,7 +11,7 @@ export function Projects({ projects }: any) {
   const t = useTranslations('projects');
 
   return (
-    <section className="py-4">
+    <section className="py-2">
       <ul className="flex flex-col list-none">
         {allProjects.map(({ id, src, title, year, description, techs, code, visit }: any, index: number) => (
           <li key={index} className="border-b border-border last:border-b-0 my-2">

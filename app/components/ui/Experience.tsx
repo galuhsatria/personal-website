@@ -71,7 +71,7 @@ export default function Experience() {
                   {experience.date}
                 </time>
 
-                <h3 className="font-semibold text-foreground">
+                <h3 className="font-semibold">
                   {experience.title}
                 </h3>
 

@@ -107,25 +107,25 @@ export default function Navbar() {
 
       <div className="mt-4 flex items-center gap-1">
         <div className="flex items-center min-w-0 flex-1 overflow-hidden whitespace-nowrap">
-          <a href="/" className="text-muted-foreground hover:text-foreground text-xs md:text-sm hover:underline truncate">
+          <a href="/" className="text-muted-foreground hover text-xs md:text-sm hover:underline truncate">
             {t('experiences')}
           </a>
           <Dot className="text-muted-foreground shrink-0" size={15}/>
-          <a href="/projects" className="text-muted-foreground hover:text-foreground text-xs md:text-sm hover:underline truncate">
+          <a href="/projects" className="text-muted-foreground hover text-xs md:text-sm hover:underline truncate">
             {projects.length} {t('featuredProjects')}
           </a>
         </div>
         <div className="flex items-center gap-3 sm:gap-5 shrink-0">
-          <Link href="https://github.com/galuhsatria" className="flex flex-row items-center gap-[6px] text-foreground hover:text-primary transition-colors group w-max" target="_blank" title="GitHub">
+          <Link href="https://github.com/galuhsatria" className="flex flex-row items-center gap-[6px] hover:text-primary transition-colors group w-max" target="_blank" title="GitHub">
             <BsGithub className="group-hover:text-black dark:group-hover:text-white" />
           </Link>
-          <Link href="https://www.linkedin.com/in/galuhsatria/" className="flex flex-row items-center gap-[6px] text-foreground hover:text-primary transition-colors group w-max" target="_blank" title="LinkedIn">
+          <Link href="https://www.linkedin.com/in/galuhsatria/" className="flex flex-row items-center gap-[6px] hover:text-primary transition-colors group w-max" target="_blank" title="LinkedIn">
             <BsLinkedin className="group-hover:text-blue-500" />
           </Link>
           <Link
             href="https://drive.google.com/file/d/1pn2sWJ-EJF9P_CT6F7XcGxd1nqzUTyJI/view?usp=sharing"
             target="_blank"
-            className="flex flex-row items-center gap-[6px] text-foreground hover:text-primary transition-colors group w-max"
+            className="flex flex-row items-center gap-[6px] hover:text-primary transition-colors group w-max"
             title="Resume"
           >
             <GrDocumentUser className="group-hover:text-green-500" />
