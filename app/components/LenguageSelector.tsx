@@ -11,7 +11,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { toast } from "sonner";
-import { scn } from "@/lib/utils";
+import { cn } from "@/lib/utils";
 
 type Language = "en" | "id";
 
@@ -33,10 +33,10 @@ export function LanguageSelector({ className, iconOnly = false }: LanguageSelect
 
   const handleLanguageChange = async (newLocale: Language) => {
     const languageName = languageNames[newLocale];
-    
+
     // Set cookie for locale
     document.cookie = `locale=${newLocale};path=/;max-age=${60 * 60 * 24 * 365}`;
-    
+
     // Refresh the page to apply new locale
     router.refresh();
     toast.success(`Language changed to ${languageName}`);
@@ -44,9 +44,9 @@ export function LanguageSelector({ className, iconOnly = false }: LanguageSelect
 
   return (
     <Select value={locale} onValueChange={handleLanguageChange}>
-      <SelectTrigger 
-        className={scn("hover:cursor-pointer dark:hover:text-zinc-50 hover:text-black",
-          iconOnly ? "w-[40px] h-[40px] border-none bg-transparent shadow-none hover:bg-accent p-0 justify-center [&>svg:last-child]:hidden" : "w-[180px]", 
+      <SelectTrigger
+        className={cn("hover:cursor-pointer dark:hover:text-zinc-50 hover:text-black",
+          iconOnly ? "w-[40px] h-[40px] border-none bg-transparent shadow-none hover:bg-accent p-0 justify-center [&>svg:last-child]:hidden" : "w-[180px]",
           className
         )}
       >

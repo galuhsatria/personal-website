@@ -1,115 +1,201 @@
 /* eslint-disable @next/next/no-img-element */
 'use client';
-import useLoaded from '@/hooks/useLoaded';
+
+import EmailForm from '@/components/EmailForm';
 import { useTranslations } from 'next-intl';
-import { SiGithub, SiInstagram, SiLinkedin, SiNextdotjs, SiReact, SiSpotify, SiTailwindcss, SiX, SiLaravel, SiInertia } from 'react-icons/si';
-import useSWR from 'swr';
+import Image from 'next/image';
+import { VscVerifiedFilled } from 'react-icons/vsc';
+import {
+  SiTypescript,
+  SiReact,
+  SiNextdotjs,
+  SiTailwindcss,
+  SiPhp,
+  SiLaravel,
+  SiNodedotjs,
+  SiNestjs,
+  SiInertia,
+  SiPrisma,
+  SiPostgresql,
+  SiSupabase,
+  SiGithub,
+  SiInstagram,
+  SiLinkedin,
+  SiX,
+} from 'react-icons/si';
+
+const techStack = [
+  // Language
+  {
+    name: 'TypeScript',
+    icon: SiTypescript,
+    url: 'https://www.typescriptlang.org/',
+  },
+  {
+    name: 'PHP',
+    icon: SiPhp,
+    url: 'https://www.php.net/',
+  },
+
+  // Frontend
+  {
+    name: 'React',
+    icon: SiReact,
+    url: 'https://react.dev/',
+  },
+  {
+    name: 'Next.js',
+    icon: SiNextdotjs,
+    url: 'https://nextjs.org/',
+  },
+  {
+    name: 'Tailwind CSS',
+    icon: SiTailwindcss,
+    url: 'https://tailwindcss.com/',
+  },
+
+  // Backend
+  {
+    name: 'Node.js',
+    icon: SiNodedotjs,
+    url: 'https://nodejs.org/',
+  },
+  {
+    name: 'NestJS',
+    icon: SiNestjs,
+    url: 'https://nestjs.com/',
+  },
+  {
+    name: 'Laravel',
+    icon: SiLaravel,
+    url: 'https://laravel.com/',
+  },
+  {
+    name: 'Inertia.js',
+    icon: SiInertia,
+    url: 'https://inertiajs.com/',
+  },
+
+  // ORM
+  {
+    name: 'Prisma',
+    icon: SiPrisma,
+    url: 'https://www.prisma.io/',
+  },
+
+  // Database & Backend Service
+  {
+    name: 'PostgreSQL',
+    icon: SiPostgresql,
+    url: 'https://www.postgresql.org/',
+  },
+  {
+    name: 'Supabase',
+    icon: SiSupabase,
+    url: 'https://supabase.com/',
+  },
+];
 
 export default function About() {
-  const dob = new Date('2003-12-02');
-  const currentDate = new Date();
-
-  const calculateAge = (dob: any, currentDate: any) => {
-    const diffInMilliseconds = currentDate - dob;
-    const ageDate = new Date(diffInMilliseconds);
-    return Math.abs(ageDate.getUTCFullYear() - 1970);
-  };
-
-  const age = calculateAge(dob, currentDate);
-
-  const fetcher = (url: string) => fetch(url).then((res) => res.json());
-
-  const { data } = useSWR('/api/spotify', fetcher);
-
-  const isLoaded = useLoaded();
-
   const t = useTranslations('about');
 
   return (
-    <main>
-      <section className={`mt-28 mb-20 max-w-4xl mx-auto max-lg:px-4 ${isLoaded && 'fade-in-start'}`}>
-        <h1 data-fade="0">
-          <span className="font-bold text-4xl text-black dark:text-white">{t('title')}</span>
-        </h1>
-        <div className="flex flex-col gap-5 mt-6">
-          <div data-fade="1">
-            <p className="dark:text-white text-black">{t('description.paragraph1', { age })}</p>
-            <p className="dark:text-white text-black">{t('description.paragraph2')}</p>
-            <p className="dark:text-white text-black">{t('description.paragraph3')}</p>
-            <div>
-              <h2 className="text-xl my-6 font-bold text-black dark:text-white">{t('favoriteTechStack')}</h2>
-              <div className="flex gap-4">
-                <SiNextdotjs className="text-4xl text-black dark:text-white" />
-                <SiReact className="text-4xl text-black dark:text-white" />
-                <SiTailwindcss className="text-4xl text-black dark:text-white" />
-                <SiLaravel className="text-4xl text-black dark:text-white" />
-                <SiInertia className="text-4xl text-black dark:text-white" />
+    <section className="flex gap-2 items-start my-4">
+      <Image
+        src="/avatar.png"
+        alt="profil-picture"
+        width={20}
+        height={20}
+        className="h-8 w-8 shrink-0 rounded-full object-cover"
+        unoptimized
+      />
+      <div className="flex flex-col gap-2 w-full min-w-0">
+        <p className="font-semibold text-sm mb-2 flex items-center gap-2">
+          galuhsatria <VscVerifiedFilled className="text-lg text-blue-500" />
+        </p>
+        <div>
+          <div className="flex flex-col gap-2">
+            <p className="text-foreground">{t('description.paragraph1')}</p>
+            <p className="text-foreground">{t('description.paragraph2')}</p>
+            <p className="text-foreground">{t('description.paragraph3')}</p>
+          </div>
+          <p className="mb-6 text-base font-semibold mt-4 text-foreground">
+            {t('favoriteTechStack')}
+          </p>
+          <div className="relative w-full overflow-hidden py-3">
+            <div className="flex items-center gap-8 overflow-x-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] px-1">
+              {techStack.map((tech) => {
+                const Icon = tech.icon;
+                return (
+                  <a
+                    key={tech.name}
+                    href={tech.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title={tech.name}
+                    className="shrink-0 text-muted-foreground transition-colors duration-200 hover:text-white"
+                  >
+                    <Icon className="h-6 w-6" />
+                  </a>
+                );
+              })}
+            </div>
+
+            <div className="pointer-events-none absolute inset-y-0 left-0 w-10 bg-gradient-to-r from-background to-transparent" />
+            <div className="pointer-events-none absolute inset-y-0 right-0 w-10 bg-gradient-to-l from-background to-transparent" />
+          </div>
+        </div>
+        <div>
+          <h2 className="text-xl my-6 font-bold text-foreground">{t('contact')}</h2>
+          <ul className="flex flex-wrap gap-4 sm:gap-6">
+            <li className="hover:text-blue-500 transition-colors text-foreground">
+              <a href="https://github.com/galuhsatria" target="_blank" rel="noopener noreferrer" className="text-foreground flex gap-2 items-center">
+                <div className="border p-1 rounded-md border-border text-xl">
+                  <SiGithub />
+                </div>
+                Github
+              </a>
+            </li>
+            <li className="hover:text-blue-500 transition-colors text-foreground">
+              <a href="https://www.linkedin.com/in/galuhsatria/" target="_blank" rel="noopener noreferrer" className="text-foreground flex gap-2 items-center">
+                <div className="border p-1 rounded-md border-border text-xl">
+                  <SiLinkedin />
+                </div>
+                LinkedIn
+              </a>
+            </li>
+            <li className="hover:text-blue-500 transition-colors text-foreground">
+              <a href="https://www.instagram.com/galuhsatria._/" target="_blank" rel="noopener noreferrer" className="text-foreground flex gap-2 items-center">
+                <div className="border p-1 rounded-md border-border text-xl">
+                  <SiInstagram />
+                </div>
+                Instagram
+              </a>
+            </li>
+            <li className="hover:text-blue-500 transition-colors text-foreground">
+              <a href="https://twitter.com/galuhsatria___" target="_blank" rel="noopener noreferrer" className="text-foreground flex gap-2 items-center">
+                <div className="border p-1 rounded-md border-border text-xl">
+                  <SiX />
+                </div>
+                X / twitter
+              </a>
+            </li>
+          </ul>
+          <div className="mt-12 bg-secondary p-4 rounded-lg">
+            <div className="flex flex-col items-center gap-8">
+              <div className="w-full">
+                <h1 className="text-xl sm:text-2xl font-bold dark:text-white text-black">
+                  {t('mail.title')}
+                </h1>
+                <p className="text-sm text-muted-foreground mt-4">{t('mail.subtitle')}</p>
+              </div>
+              <div className="w-full">
+                <EmailForm />
               </div>
             </div>
           </div>
-          <div data-fade="2">
-            <h2 className="text-xl my-6 font-bold text-black dark:text-white">{t('contact')}</h2>
-            <ul className="flex flex-wrap gap-6">
-              <li className="hover:text-blue-500 transition-colors text-black dark:text-white">
-                <a href="https://github.com/galuhsatria" target="_balank" className=" text-black dark:text-white flex gap-2 items-center">
-                  <div className="border p-1 rounded-md border-border text-xl">
-                    <SiGithub />
-                  </div>
-                  Github
-                </a>
-              </li>
-              <li className="hover:text-blue-500 transition-colors text-black dark:text-white">
-                <a href="https://www.linkedin.com/in/galuhsatria/" target="_balank" className="text-black dark:text-white flex gap-2 items-center">
-                  <div className="border p-1 rounded-md border-border text-xl">
-                    <SiLinkedin />
-                  </div>
-                  LinkedIn
-                </a>
-              </li>
-              <li className="hover:text-blue-500 transition-colors text-black dark:text-white">
-                <a href="https://www.instagram.com/galuhsatria._/" target="_balank" className="text-black dark:text-white flex gap-2 items-center">
-                  <div className="border p-1 rounded-md border-border text-xl">
-                    <SiInstagram />
-                  </div>
-                  Instagram
-                </a>
-              </li>
-              <li className="hover:text-blue-500 transition-colors text-black dark:text-white">
-                <a href="https://twitter.com/galuhsatria___" target="_balank" className="text-black dark:text-white flex gap-2 items-center">
-                  <div className="border p-1 rounded-md border-border text-xl">
-                    <SiX />
-                  </div>
-                  X / twitter
-                </a>
-              </li>
-            </ul>
-          </div>
         </div>
-
-        <div className="pt-10" data-fade="3">
-          <p className="font-bold text-xl mb-1 text-black dark:text-white">{t('spotify')}</p>
-          <p className="text-sm text-gray-400">{t('spotifySubtitle')}</p>
-
-          <div className="mt-5">
-            <a
-              target="_blank"
-              rel="noopener noreferer"
-              href={data?.isPlaying ? data.songUrl : 'https://open.spotify.com/user/31wok5dqph7tf7rl2vvholhpbpp4'}
-              className="relative flex w-72 items-center space-x-4 rounded-md border border-border p-5 transition-shadow hover:shadow-md bg-[#1E1F1E]"
-            >
-              <div className="w-16">{data?.isPlaying ? <img className="w-16 shadow-sm rounded-md" src={data?.albumImageUrl} alt={data?.album} /> : <SiSpotify size={64} color={'#1ED760'} />}</div>
-
-              <div className="flex-1">
-                <p className="component text-white font-bold">{data?.isPlaying ? data.title : t('listening')}</p>
-                <p className="font-dark text-white text-xs">{data?.isPlaying ? data.artist : 'Spotify'}</p>
-              </div>
-              <div className="absolute bottom-1.5 right-1.5">
-                <SiSpotify size={20} color={'#1ED760'} />
-              </div>
-            </a>
-          </div>
-        </div>
-      </section>
-    </main>
+      </div>
+    </section>
   );
 }

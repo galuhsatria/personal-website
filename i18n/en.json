@@ -1,9 +1,13 @@
 {
   "navigation": {
-    "home": "Home",
+    "experience": "Experience",
     "projects": "Projects",
     "blog": "Blog",
-    "about": "About"
+    "about": "About",
+    "status":"Open to work",
+    "experiences":"4 years of experience",
+    "featuredProjects": "featured projects",
+    "letsTalk":"Say hi"
   },
   "home": {
     "title": "Hi Im Galuh",
@@ -17,7 +21,7 @@
         "bbpntb": {
           "title": "IT Specialist Internship at Balai Bahasa NTB",
           "subtitle": "Developed a digital asset lending system to streamline submission, approval, tracking, and document archiving with greater transparency and accountability.",
-          "date": "April 2025"
+          "date": "December 2025 - June 2026"
         },
         "proxocoris": {
           "title": "PROXOCORIS International Competition 2025",
@@ -40,14 +44,6 @@
           "date": "September 2023 - September 2024"
         }
       }
-    },
-    "contact": {
-      "title": "Get in touch",
-      "subtitle": "I'm always interested in exploring new opportunities, collaborating, or exchanging ideas with like-minded individuals. Feel free to email me if you'd like to see my portfolio deck or to discuss a potential project.",
-      "name": "Name",
-      "email": "Email",
-      "message": "Message",
-      "sendMessage": "Send Message"
     }
   },
   "projects": {
@@ -56,11 +52,11 @@
     "items": {
       "simpelbmn": {
         "name": "SIMPEL-BMN",
-        "description": "Platform for submitting BMN loan applications online"
+        "description": "a web based asset management system designed to manage, monitor, and report government owned assets (State Property/BMN) in an integrated manner."
       },
       "cataai": {
         "name": "Cata AI",
-        "description": "A platform that provides cataract classification using Deep Learning"
+        "description": "a web based deep learning application that classifies cataract severity using Convolutional Neural Networks (CNN), achieving 98% classification accuracy."
       },
       "pcbumigora": {
         "name": "PC Bumigora",
@@ -68,7 +64,7 @@
       },
       "kasaTalk": {
         "name": "Kasa Talk",
-        "description": "A website-based  Sasak language dictionary"
+        "description": "a web based Sasak language dictionary platform that enables users to translate Indonesian words into Sasak and contribute new words to expand the dictionary."
       },
       "quranQuiz": {
         "name": "Quran Quiz",
@@ -91,14 +87,22 @@
   "about": {
     "title": "About Me",
     "description": {
-      "paragraph1": "Hi, I'm Galuh Satria. I’m interested in web development and enjoy building websites and web applications that are useful and comfortable to use.",
-      "paragraph2": "I started learning web development independently in December 2021 through various online resources. Over time, I have continued to improve my skills by working on different projects using React, Next.js, Laravel, and other web technologies.",
-      "paragraph3": "While studying Computer Science, I also explored Intelligent Systems and AI, including how artificial intelligence models are built, trained, and applied to solve real-world problems. I’m always excited to learn new things and keep growing as a developer."
+      "paragraph1": "Hi, I'm Galuh Satria.",
+      "paragraph2": "A Fullstack Web Developer with experience through corporate internships, intensive bootcamp training, and independent projects.",
+      "paragraph3": "Skilled in building and deploying web applications using Next.js, Laravel, and PostgreSQL, with experience across the full development lifecycle from planning to deployment. Comfortable working in both structured team environments and self-directed projects."
     },
     "favoriteTechStack": "Current Favorite Tech Stack",
     "contact": "Contact",
     "spotify": "Currently playing on my Spotify",
     "spotifySubtitle": "I really like listening to music 😅",
-    "listening": "Not listening"
+    "listening": "Not listening",
+    "mail": {
+      "title": "Get in touch",
+      "subtitle": "I'm always interested in exploring new opportunities, collaborating, or exchanging ideas with like-minded individuals. Feel free to email me if you'd like to see my portfolio deck or to discuss a potential project.",
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "sendMessage": "Send Message"
+    }
   }
 }
