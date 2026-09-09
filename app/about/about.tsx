@@ -185,7 +185,7 @@ export default function About() {
                 key={waveKey}
                 active={isPlaying}
                 segments={[
-                  { text: title },
+                  { text: title, className: ""},
                   { text: " • ", className: "text-neutral-500" },
                   { text: name, className: "text-neutral-400 font-light" },
                 ]}
