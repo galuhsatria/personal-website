@@ -115,9 +115,9 @@ export default function About() {
         </p>
         <div>
           <div className="flex flex-col gap-2">
-            <p className="text-foreground">{t('description.paragraph1')}</p>
-            <p className="text-foreground">{t('description.paragraph2')}</p>
-            <p className="text-foreground">{t('description.paragraph3')}</p>
+            <p className="text-foreground max-md:text-sm">{t('description.paragraph1')}</p>
+            <p className="text-foreground max-md:text-sm">{t('description.paragraph2')}</p>
+            <p className="text-foreground max-md:text-sm">{t('description.paragraph3')}</p>
           </div>
           <p className="mb-6 text-base font-semibold mt-4 text-foreground">
             {t('favoriteTechStack')}

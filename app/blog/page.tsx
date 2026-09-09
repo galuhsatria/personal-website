@@ -23,7 +23,7 @@ export default async function Blog() {
           const stat = stats[pathname];
 
           return (
-            <li key={index} data-fade={index + 1} className="flex gap-2 items-start">
+            <li key={index} className="flex gap-2 items-start">
               <Image src="/avatar.png" alt="profil-picture" width={20} height={20} className="h-8 w-8 rounded-full object-cover" unoptimized />
               <div className="w-full">
                 <p className="font-semibold text-sm mb-2 flex gap-1 items-center">

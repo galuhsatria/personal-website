@@ -12,7 +12,6 @@ import { useEffect, useState } from 'react';
 import { BsGithub, BsLinkedin, BsBriefcaseFill } from 'react-icons/bs';
 import { GrDocumentUser } from 'react-icons/gr';
 import { VscVerifiedFilled } from 'react-icons/vsc';
-import { toast } from 'sonner';
 
 import { Button } from './button';
 
@@ -47,13 +46,11 @@ export default function Navbar() {
   const handleThemeToggle = () => {
     const newTheme = isDark ? 'light' : 'dark';
     setTheme(newTheme);
-    toast.success(`Tema diubah ke ${newTheme === 'dark' ? 'Gelap' : 'Terang'}`);
   };
 
   const handleLanguageToggle = () => {
     const newLocale: Language = locale === 'en' ? 'id' : 'en';
     document.cookie = `locale=${newLocale};path=/;max-age=${60 * 60 * 24 * 365}`;
-    toast.success(`Bahasa diubah ke ${languageNames[newLocale]}`);
     router.refresh();
   };
 
@@ -82,7 +79,7 @@ export default function Navbar() {
         </Button>
       </div>
 
-      <div className="flex justify-between items-start mt-4 gap-3">
+      <div className="flex justify-between items-start mt-6 gap-3">
         <div className="min-w-0 flex-1">
           <h3 className="text-lg sm:text-xl font-bold truncate">Galuh Satria</h3>
           <p className="truncate text-sm sm:text-base">Fullstack Developer, Lombok</p>
@@ -108,12 +105,12 @@ export default function Navbar() {
         </p>
       </div>
 
-      <div className="mt-4 flex items-center gap-2">
+      <div className="mt-4 flex items-center gap-1">
         <div className="flex items-center min-w-0 flex-1 overflow-hidden whitespace-nowrap">
           <a href="/" className="text-muted-foreground hover:text-foreground text-xs md:text-sm hover:underline truncate">
             {t('experiences')}
           </a>
-          <Dot className="text-xs text-muted-foreground shrink-0" />
+          <Dot className="text-muted-foreground shrink-0" size={15}/>
           <a href="/projects" className="text-muted-foreground hover:text-foreground text-xs md:text-sm hover:underline truncate">
             {projects.length} {t('featuredProjects')}
           </a>
