@@ -4,10 +4,10 @@
     "projects": "Projects",
     "blog": "Blog",
     "about": "About",
-    "status":"Open to work",
-    "experiences":"4 years of experience",
+    "status": "Open to work",
+    "experiences": "4 years of experience",
     "featuredProjects": "featured projects",
-    "letsTalk":"Say hi"
+    "letsTalk": "Say hi"
   },
   "home": {
     "title": "Hi Im Galuh",
@@ -50,37 +50,41 @@
     "title": "Projects",
     "visit": "Visit Site",
     "items": {
+      "posapp": {
+        "name": "POS App | Open Source",
+        "description": "An open-source, web-based Point of Sale system for recording sales transactions, managing products and inventory, and viewing sales reports with ease, with no extra installation required."
+      },
       "simpelbmn": {
         "name": "SIMPEL-BMN",
-        "description": "a web based asset management system designed to manage, monitor, and report government owned assets (State Property/BMN) in an integrated manner."
+        "description": "An information system for submitting state property (BMN) loan requests online, covering submission, approval, and status tracking to make administration faster and better organized."
       },
       "cataai": {
         "name": "Cata AI",
-        "description": "a web based deep learning application that classifies cataract severity using Convolutional Neural Networks (CNN), achieving 98% classification accuracy."
+        "description": "A Deep Learning-based cataract classification platform that analyzes eye images to help detect cataracts quickly, serving as an early screening aid."
       },
       "pcbumigora": {
         "name": "PC Bumigora",
-        "description": "A platform that provides information about PC Bumigora"
+        "description": "The official information website of PC Bumigora, featuring its profile, activities, and the latest updates for members and the general public."
       },
       "kasaTalk": {
         "name": "Kasa Talk",
-        "description": "a web based Sasak language dictionary platform that enables users to translate Indonesian words into Sasak and contribute new words to expand the dictionary."
+        "description": "A web-based Sasak language dictionary for looking up word meanings and understanding their usage, helping preserve the Sasak regional language for learners and speakers alike."
       },
       "quranQuiz": {
         "name": "Quran Quiz",
-        "description": "A quiz application to help memorize the Quran"
+        "description": "An interactive quiz app that helps users memorize and test their Qur'an memorization through engaging, easy-to-follow questions."
       },
       "perkakas": {
         "name": "Perkakas",
-        "description": "A platform that provides common online tools"
+        "description": "A collection of practical online tools you can use right from your browser to support everyday tasks, with no installation needed."
       },
       "waHelper": {
         "name": "WA Helper",
-        "description": "You can easily chat someone without saving number"
+        "description": "A handy tool for sending WhatsApp messages directly to any number without having to save it to your contacts first."
       },
       "monanya": {
         "name": "Monanya",
-        "description": "Application for collecting anonymous questions"
+        "description": "An app for collecting anonymous questions, so anyone can ask or share feedback freely without hesitation."
       }
     }
   },

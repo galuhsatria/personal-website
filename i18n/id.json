@@ -4,10 +4,10 @@
     "projects": "Proyek",
     "blog": "Blog",
     "about": "Tentang",
-    "status":"Terbuka untuk bekerja",
-    "experiences":"4 tahun pengalaman",
+    "status": "Terbuka untuk bekerja",
+    "experiences": "4 tahun pengalaman",
     "featuredProjects": "proyek unggulan",
-    "letsTalk":"Say hi"
+    "letsTalk": "Say hi"
   },
   "home": {
     "title": "Halo, Saya Galuh",
@@ -50,37 +50,41 @@
     "title": "Proyek",
     "visit": "Kunjungi",
     "items": {
+      "posapp": {
+        "name": "POS App | Open Source",
+        "description": "Sistem kasir (Point of Sale) berbasis website dan open source untuk mencatat transaksi penjualan, mengelola produk dan stok, serta melihat laporan penjualan dengan mudah, tanpa perlu menginstal aplikasi tambahan."
+      },
       "simpelbmn": {
         "name": "SIMPEL-BMN",
-        "description": "Platform untuk melakukan pengajuan peminjaman BMN secara daring"
+        "description": "Sistem informasi untuk mengajukan peminjaman Barang Milik Negara (BMN) secara daring, mulai dari pengajuan, persetujuan, hingga pemantauan status peminjaman, sehingga proses administrasi menjadi lebih cepat dan tertata."
       },
       "cataai": {
         "name": "Cata AI",
-        "description": "Platform yang menyediakan klasifikasi katarak menggunakan Deep Learning"
+        "description": "Platform klasifikasi katarak berbasis Deep Learning yang menganalisis citra mata untuk membantu mendeteksi kondisi katarak secara cepat sebagai alat bantu skrining awal."
       },
       "pcbumigora": {
         "name": "PC Bumigora",
-        "description": "Platform yang menyediakan informasi tentang PC Bumigora"
+        "description": "Situs informasi resmi PC Bumigora yang memuat profil, kegiatan, dan berbagai informasi terkini bagi anggota maupun masyarakat umum."
       },
       "kasaTalk": {
         "name": "Kasa Talk",
-        "description": "Platform kamus bahasa Sasak berbasis website"
+        "description": "Kamus bahasa Sasak berbasis website untuk mencari arti kata, memahami penggunaannya, dan membantu melestarikan bahasa daerah Sasak bagi pembelajar maupun penutur."
       },
       "quranQuiz": {
         "name": "Quran Quiz",
-        "description": "Aplikasi kuis untuk membantu menghafal Al-Qur'an"
+        "description": "Aplikasi kuis interaktif untuk membantu menghafal dan menguji hafalan Al-Qur'an melalui pertanyaan yang menyenangkan dan mudah diikuti."
       },
       "perkakas": {
         "name": "Perkakas",
-        "description": "Platform yang menyediakan berbagai alat daring"
+        "description": "Kumpulan berbagai alat daring praktis yang bisa digunakan langsung dari browser untuk membantu pekerjaan sehari-hari, tanpa perlu instalasi."
       },
       "waHelper": {
         "name": "WA Helper",
-        "description": "Memungkinkan Anda mengirim pesan WhatsApp tanpa menyimpan nomor"
+        "description": "Alat bantu untuk mengirim pesan WhatsApp langsung ke nomor mana pun tanpa harus menyimpan nomor tersebut ke kontak terlebih dahulu."
       },
       "monanya": {
         "name": "Monanya",
-        "description": "Aplikasi untuk mengumpulkan pertanyaan anonim"
+        "description": "Aplikasi untuk mengumpulkan pertanyaan secara anonim, sehingga setiap orang bisa bertanya atau memberi masukan dengan bebas tanpa rasa canggung."
       }
     }
   },
