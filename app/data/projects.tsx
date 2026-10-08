@@ -6,6 +6,7 @@ import pcbumigora from "@/assets/images/projects/pcbumigora.png";
 import cataai from "@/assets/images/projects/cata-ai.png";
 import monanya from "@/assets/images/projects/monanya.png";
 import simpelbmn from "@/assets/images/projects/simpelbmn.png";
+import posApp from "@/assets/images/projects/pos-app.png";
 
 import {
   SiNextdotjs,
@@ -195,5 +196,18 @@ export const projects: ProjectsProps[] = [
       { name: "MySQL", icon: <SiMysql /> },
     ],
     visit: "https://sidaya.kemendikdasmen.go.id/simpelbmn",
+  },
+  {
+    id: 8,
+    src: posApp,
+    title: "POS App | Open Source",
+    year:'2026',
+    description: "items.posapp.description",
+    techs: [
+      { name: "React Js", icon: <SiReact /> },
+      { name: "Supabase", icon: <SiSupabase /> },
+      { name: "Tailwind", icon: <SiTailwindcss /> },
+    ],
+    visit: "https://github.com/galuhsatria/pos-app",
   },
 ];
