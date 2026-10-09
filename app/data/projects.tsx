@@ -97,7 +97,7 @@ export const projects: ProjectsProps[] = [
       { name: "Tailwind", icon: <SiTailwindcss /> },
     ],
     code: "https://github.com/galuhsatria/perkakas",
-    visit: "https://perkakas-galuhsatria.vercel.app/",
+    visit: "https://perkakas.galuhsatria.space"",
   },
   {
     id: 3,
