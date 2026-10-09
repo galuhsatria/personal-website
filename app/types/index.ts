@@ -6,7 +6,7 @@ export interface ProjectsProps {
   description: string;
   techs: any[];
   code?: string;
-  visit: string;
+  visit?: string;
 }
 
 export interface PostMetadata {
